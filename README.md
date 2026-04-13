@@ -12,6 +12,40 @@ The system is designed to build **reliable, observable, and controllable AI syst
 
 ---
 
+## 🏗️ What is a Harness?
+
+A **Harness** is:
+
+- The **environment** around an AI agent
+- The **control system** that ensures reliability
+- The **scaffolding** for long-running tasks
+
+It includes:
+
+- Constraints (rules, boundaries)
+- Feedback loops (evaluation, retries)
+- Tooling (CI, linters, runtime)
+- State management (memory, artifacts)
+- Verification systems (tests, external validation)
+
+> "A harness is the combination of tooling, documentation, architectural constraints, and feedback loops that surround an agent."
+
+---
+
+## ⚠️ Problem Harness Engineering Solves
+
+### Failure Modes of Raw Agents
+
+- Context loss over time  
+- Self-evaluation bias  
+- Task drift  
+- Accumulated entropy ("AI slop")  
+- Non-deterministic outputs  
+
+> "An agent that goes off the rails… isn’t a model problem. It’s an infrastructure problem."
+
+---
+
 ## 🏗️ System Architecture
 
 This architecture follows a **layered governance model**:
@@ -126,7 +160,6 @@ Ensures system-wide coherence and strategic alignment.
 
 ## 🔄 Execution Flow
 
-
 ```mermaid
 graph TD
 
@@ -178,21 +211,7 @@ Observability --> MetaController
 ```text
 
 /agents
-├── chief-of-staff.md
-├── harness-architect.md
-├── orchestrator.md
-├── planner.md
-├── context-curator.md
-├── generator.md
-├── evaluator.md
-├── alignment.md
-├── constraints.md
-├── simulation.md
-├── recovery.md
-├── optimization.md
-├── tooling.md
-├── sandbox.md
-├── governor.md
+/instructions
 
 ```
 
