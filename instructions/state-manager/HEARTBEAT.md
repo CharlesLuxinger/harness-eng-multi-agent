@@ -10,50 +10,41 @@ The State Manager Heartbeat is a **deterministic, continuous loop** that ensures
 4. Prepares context rehydration for the next agent
 5. Monitors memory health and triggers optimization
 
-This loop runs **for every execution cycle**, ensuring the system never loses context.
+This loop runs **for every execution cycle**, ensuring the system should not loses context.
 
 ---
 
 ## Core Execution Lifecycle
 
-```
+### CYCLE START (from Orchestrator)
 
- CYCLE START (from Orchestrator) 
- - Task ID, Pipeline Step 
+- Task ID, Pipeline Step
 
- 
- 
- PHASE 1: WAKE & IDENTITY VALIDATION
- (Steps 1-2)
- 
- 
- 
- PHASE 2: STATE CAPTURE & PERSISTENCE
- (Steps 3-6)
- 
- 
- 
- PHASE 3: MEMORY OPERATIONS
- (Steps 7-9)
- 
- 
- 
- PHASE 4: REHYDRATION & DELIVERY
- (Steps 10-12)
- 
- 
- 
- PHASE 5: VALIDATION & CONTINUITY
- (Steps 13-14)
- 
- 
- 
- CYCLE OUTPUT
- - Context Bundle Ready
- - State Validated
- - Memory Optimized
- 
-```
+### PHASE 1: WAKE & IDENTITY VALIDATION
+
+- (Steps 1-2)
+
+### PHASE 2: STATE CAPTURE & PERSISTENCE
+
+- (Steps 3-6)
+
+### PHASE 3: MEMORY OPERATIONS
+
+- (Steps 7-9)
+
+### PHASE 4: REHYDRATION & DELIVERY
+
+- (Steps 10-12)
+
+### PHASE 5: VALIDATION & CONTINUITY
+
+- (Steps 13-14)
+
+### CYCLE OUTPUT
+
+- Context Bundle Ready
+- State Validated
+- Memory Optimized
 
 ---
 
@@ -65,8 +56,8 @@ This loop runs **for every execution cycle**, ensuring the system never loses co
 
 ### Step 1: Wake & Sanity Check
 
-**When:** Cycle begins 
-**Owner:** State Manager 
+**When:** Cycle begins
+**Owner:** State Manager
 **Duration:** < 100ms
 
 ```yaml
@@ -85,14 +76,14 @@ validation:
 
 output:
  - status: "ready"
- - memory_health: "good|warning|critical"
+ - memory_health: "good|warning|important"
  - available_capacity: "bytes"
 
 on_error: |
  IF storage unavailable:
- - Log CRITICAL error
+ - Log important error
  - Signal Orchestrator: STATE_MANAGER_OFFLINE
- - Halt execution (recovery required)
+ - Halt execution (recovery needed)
 
 on_success: "Proceed to Step 2"
 ```
@@ -101,8 +92,8 @@ on_success: "Proceed to Step 2"
 
 ### Step 2: Identity & Mission Confirmation
 
-**When:** After storage validation 
-**Owner:** State Manager 
+**When:** After storage validation
+**Owner:** State Manager
 **Duration:** < 50ms
 
 ```yaml
@@ -131,8 +122,8 @@ status: "Identity confirmed, proceeding to capture phase"
 
 ### Step 3: Receive & Validate Cycle Input
 
-**When:** Orchestrator signals cycle start 
-**Owner:** State Manager 
+**When:** Orchestrator signals cycle start
+**Owner:** State Manager
 **Duration:** < 200ms
 
 ```yaml
@@ -175,8 +166,8 @@ on_success: "Proceed to Step 4"
 
 ### Step 4: Classify & Version Artifacts
 
-**When:** After input validation 
-**Owner:** State Manager 
+**When:** After input validation
+**Owner:** State Manager
 **Duration:** < 300ms
 
 ```yaml
@@ -215,8 +206,8 @@ on_success: "Proceed to Step 5"
 
 ### Step 5: Persist to Storage Layers
 
-**When:** After classification 
-**Owner:** State Manager 
+**When:** After classification
+**Owner:** State Manager
 **Duration:** < 500ms
 
 ```yaml
@@ -275,8 +266,8 @@ on_success: "Proceed to Step 6"
 
 ### Step 6: Update Execution State
 
-**When:** After artifacts persisted 
-**Owner:** State Manager 
+**When:** After artifacts persisted
+**Owner:** State Manager
 **Duration:** < 200ms
 
 ```yaml
@@ -318,8 +309,8 @@ on_success: "Proceed to memory operations phase"
 
 ### Step 7: Validate Stored Data Integrity
 
-**When:** After state update 
-**Owner:** State Manager 
+**When:** After state update
+**Owner:** State Manager
 **Duration:** < 400ms
 
 ```yaml
@@ -340,7 +331,7 @@ integrity_rules:
 sampling_strategy:
  - validate_100_percent: if_less_than_10_artifacts
  - validate_10_percent_random: if_more_than_10_artifacts
- - always_validate: audit_layer
+ - consistently_validate: audit_layer
 
 output:
  - validation_passed: boolean
@@ -349,7 +340,7 @@ output:
 
 on_error: |
  IF integrity check fails:
- - Log CRITICAL corruption
+ - Log important corruption
  - If recoverable: attempt rollback to last known good version
  - If not recoverable: signal Orchestrator DATA_CORRUPTION
  - Quarantine corrupted artifact
@@ -361,8 +352,8 @@ on_success: "Proceed to Step 8"
 
 ### Step 8: Execute Memory Optimization
 
-**When:** After integrity validation 
-**Owner:** State Manager 
+**When:** After integrity validation
+**Owner:** State Manager
 **Duration:** < 1000ms
 
 ```yaml
@@ -372,12 +363,12 @@ optimization_strategies:
  archival:
  - find_artifacts: age > policy_threshold
  - action: move_to_cold_storage
- - preserve_metadata: always
+ - preserve_metadata: consistently
 
  deduplication:
  - find_duplicates: identical_checksum
  - action: merge_keep_latest_version
- - preserve_all_versions: always
+ - preserve_all_versions: consistently
 
  compression:
  - find_compressible: large_text_artifacts
@@ -413,8 +404,8 @@ on_success: "Proceed to Step 9"
 
 ### Step 9: Update Memory Health Metrics
 
-**When:** After optimization 
-**Owner:** State Manager 
+**When:** After optimization
+**Owner:** State Manager
 **Duration:** < 100ms
 
 ```yaml
@@ -458,8 +449,8 @@ on_success: "Proceed to rehydration phase"
 
 ### Step 10: Query & Fetch Relevant Artifacts
 
-**When:** After memory health update 
-**Owner:** State Manager 
+**When:** After memory health update
+**Owner:** State Manager
 **Duration:** < 300ms
 
 ```yaml
@@ -506,8 +497,8 @@ on_success: "Proceed to Step 11"
 
 ### Step 11: Assemble & Compress Context Bundle
 
-**When:** After fetching relevant artifacts 
-**Owner:** State Manager 
+**When:** After fetching relevant artifacts
+**Owner:** State Manager
 **Duration:** < 400ms
 
 ```yaml
@@ -574,8 +565,8 @@ on_success: "Proceed to Step 12"
 
 ### Step 12: Deliver Context Bundle & Mark Ready
 
-**When:** After assembly & compression 
-**Owner:** State Manager 
+**When:** After assembly & compression
+**Owner:** State Manager
 **Duration:** < 100ms
 
 ```yaml
@@ -615,8 +606,8 @@ on_success: "Proceed to validation & continuity phase"
 
 ### Step 13: Cycle Closure & State Finalization
 
-**When:** After context bundle delivered 
-**Owner:** State Manager 
+**When:** After context bundle delivered
+**Owner:** State Manager
 **Duration:** < 200ms
 
 ```yaml
@@ -637,7 +628,7 @@ closure_operations:
 
  - archive_short_term:
  - items_no_longer_needed: move to archive
- - preserve_essential: keep as required
+ - preserve_essential: keep as needed
 
  - finalize_state_version:
  - mark_current_state: immutable
@@ -662,8 +653,8 @@ on_success: "Proceed to Step 14"
 
 ### Step 14: Continuous Loop Behavior
 
-**When:** Cycle finalized 
-**Owner:** State Manager 
+**When:** Cycle finalized
+**Owner:** State Manager
 **Duration:** < 50ms
 
 ```yaml
@@ -688,7 +679,7 @@ loop_continuation:
 
 halt_conditions:
  - if_storage_offline: "Alert and wait for recovery"
- - if_memory_critical: "Halt and signal Orchestrator"
+ - if_memory_important: "Halt and signal Orchestrator"
  - if_corruption_detected: "Alert Orchestrator and wait"
 
 status:
@@ -698,22 +689,22 @@ status:
 
 ---
 
-## Hard Constraints (MUST NOT)
+## Hard Constraints (should not)
 
 ```yaml
 HARD_CONSTRAINTS:
- - MUST NOT lose or overwrite artifacts without versioning
- - MUST NOT serve stale or corrupted data
- - MUST NOT exceed storage quota
- - MUST NOT block critical execution for optimization
- - MUST NOT lose traceability or audit trails
- - MUST NOT persist unvalidated data
- - MUST NOT serve context bundles older than validity period
- - MUST NOT allow concurrent writes to same artifact
- - MUST NOT decompress or alter stored artifacts
- - MUST NOT expose internal state manager data to other agents
- - MUST NOT proceed without storage validation
- - MUST NOT skip integrity checks
+ - should not lose or overwrite artifacts without versioning
+ - should not serve stale or corrupted data
+ - should not exceed storage quota
+ - should not block important execution for optimization
+ - should not lose traceability or audit trails
+ - should not persist unvalidated data
+ - should not serve context bundles older than validity period
+ - should not allow concurrent writes to same artifact
+ - should not decompress or alter stored artifacts
+ - should not expose internal state manager data to other agents
+ - should not proceed without storage validation
+ - should not skip integrity checks
 ```
 
 ---
@@ -742,13 +733,13 @@ You are executing the State Manager Heartbeat.
 
 This is a deterministic, 14-step loop that runs every cycle.
 
-1. You MUST complete each step in order
-2. You MUST validate at each step before proceeding
-3. You MUST record metrics and decisions
-4. You MUST handle errors without losing data
-5. You MUST return to idle after delivery
+1. You should complete each step in order
+2. You should validate at each step before proceeding
+3. You should record metrics and decisions
+4. You should handle errors without losing data
+5. You should return to idle after delivery
 
-Core principle: "State must live outside the model and be reloaded every cycle."
+Core principle: "State should live outside the model and be reloaded every cycle."
 
 Every cycle, you:
 - Capture and persist all artifacts
@@ -758,7 +749,7 @@ Every cycle, you:
 - Finalize state
 - Return to idle
 
-Never skip a step. Never lose data. Never compromise integrity.
+should not skip a step. should not lose data. should not compromise integrity.
 ```
 
 ---
@@ -766,10 +757,3 @@ Never skip a step. Never lose data. Never compromise integrity.
 ## Final Insight
 
 The State Manager Heartbeat is the **pulse of system reliability**. Every cycle, it captures, preserves, validates, and rehydrates the entire system state. Without this deterministic loop, agent systems lose context, accumulate entropy, and become unreliable. With it, they become **reproducible, auditable, and trustworthy**.
-
----
-
-**Version:** 1.0.0 
-**Status:** Production Ready 
-**Last Updated:** 2025-04-13
-

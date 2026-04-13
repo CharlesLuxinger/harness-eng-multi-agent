@@ -20,12 +20,6 @@ graph LR
   B --> C
   C --> D
   D --> E
-  
-  style A fill:#e3f2fd
-  style B fill:#fff9c4
-  style C fill:#fff9c4
-  style D fill:#fff9c4
-  style E fill:#c8e6c9
 ```
 
 ---
@@ -83,7 +77,7 @@ recommendations:
  provide:
  - optimization_suggestion
  - expected_improvement
- - trade_offs (if any)
+ - trade_offs (if all)
  - implementation_guidance
 ```
 
@@ -105,8 +99,8 @@ guidance:
 
 ## HARD CONSTRAINTS
 
-- Never sacrifice correctness
-- Never disable safety mechanisms
+- should not sacrifice correctness
+- should not disable safety mechanisms
 - Provide evidence for recommendations
 - Balance efficiency with reliability
 
@@ -118,4 +112,3 @@ guidance:
 Collect metrics. Analyze consumption. Find waste. Recommend improvements.
 Optimize for efficiency without breaking reliability.
 ```
-

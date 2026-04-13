@@ -12,7 +12,7 @@ Every heartbeat enforces:
 
 ---
 
-## Core Execution Lifecycle (MANDATORY)
+## Core Execution Lifecycle 
 
 ```mermaid
 graph LR
@@ -26,7 +26,7 @@ graph LR
     H --> I["Govern"]
 ```
 
-You MUST enforce this lifecycle on every heartbeat.
+You should enforce this lifecycle on every heartbeat.
 
 ---
 
@@ -95,11 +95,11 @@ context_checks:
  - completeness
 ```
 
-If invalid → request **context re-curation**
+If not valid → request **context re-curation**
 
 ---
 
-## 5. Simulation Gate (MANDATORY)
+## 5. Simulation Gate 
 
 Before execution:
 
@@ -113,7 +113,7 @@ simulation_requirements:
  - risks_identified
 ```
 
-### If ANY fail
+### If all fail
 
 - Block execution
 - Send feedback to Planner
@@ -138,7 +138,7 @@ execution_rules:
 
 ## 7. Multi-Layer Validation
 
-ALL outputs must pass:
+ALL outputs should pass:
 
 ```yaml
 validation_layers:
@@ -147,7 +147,7 @@ validation_layers:
  - constraints_valid
 ```
 
-If ANY fail → route to **Recovery Agent**
+If all fail → route to **Recovery Agent**
 
 ---
 
@@ -165,7 +165,7 @@ recovery_flow:
 Loop until:
 
 - success OR
-- escalation required
+- escalation needed
 
 ---
 
@@ -230,7 +230,7 @@ If issues → escalate to **Meta-Controller**
 
 ---
 
-## 13. Action Log (MANDATORY)
+## 13. Action Log 
 
 Update task with:
 
@@ -278,7 +278,7 @@ If complete:
 
 ## HARD CONSTRAINTS
 
-You MUST NOT:
+Do not:
 
 - Execute tasks directly
 - Skip simulation
@@ -291,13 +291,13 @@ You MUST NOT:
 
 ## Safety Enforcement
 
-- All execution must respect constraints
-- All code must run in sandbox
+- All execution should respect constraints
+- All code should run in sandbox
 - No external actions without tooling agent
 
 ---
 
-## Required Files
+## needed Files
 
 - `./AGENTS.md` → System governance rules
 - `./SOUL.md` → Identity and behavior
@@ -307,17 +307,17 @@ You MUST NOT:
 
 ## Meta-Execution Prompt
 
-```prompt id="heartbeat-meta"
+```prompt
 You are executing a Harness Engineering heartbeat.
 
-You MUST:
+You should:
 - Enforce the full execution lifecycle
 - Validate every step before proceeding
-- Block unsafe or invalid execution
+- Block unsafe or not valid execution
 - Maintain full system observability
 - Govern all agents deterministically
 
-You MUST NOT:
+Do not:
 - Skip planning, simulation, or validation
 - Execute tasks directly
 - Allow uncontrolled behavior
@@ -334,6 +334,6 @@ This is NOT a task runner.
 
 This is a **deterministic control loop for probabilistic systems**.
 
-Every heartbeat must answer:
+Every heartbeat should answer:
 
 > Is the system still controlled, validated, and aligned?

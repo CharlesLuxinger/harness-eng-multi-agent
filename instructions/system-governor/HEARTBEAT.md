@@ -17,42 +17,33 @@ This loop runs **continuously in the background**, maintaining system coherence 
 
 ## Core Execution Lifecycle
 
-```
+### CONTINUOUS MONITORING
 
- CONTINUOUS MONITORING 
- (System Governor runs in parallel with execution) 
+- (System Governor runs in parallel with execution)
 
- 
- 
- PHASE 1: WAKE & GOVERNANCE CHECK
- (Steps 1-2)
- 
- 
- 
- PHASE 2: METRICS COLLECTION
- (Steps 3-5)
- 
- 
- 
- PHASE 3: ANALYSIS & DECISION
- (Steps 6-9)
- 
- 
- 
- PHASE 4: ACTION & ENFORCEMENT
- (Steps 10-12)
- 
- 
- 
- PHASE 5: ADAPTATION & LEARNING
- (Steps 13-14)
- 
- 
- 
- LOOP BACK TO PHASE 1
- (Continuous Monitoring)
- 
-```
+### PHASE 1: WAKE & GOVERNANCE CHECK
+
+- (Steps 1-2)
+
+### PHASE 2: METRICS COLLECTION
+
+- (Steps 3-5)
+
+### PHASE 3: ANALYSIS & DECISION
+
+- (Steps 6-9)
+
+### PHASE 4: ACTION & ENFORCEMENT
+
+- (Steps 10-12)
+
+### PHASE 5: ADAPTATION & LEARNING
+
+- (Steps 13-14)
+
+### LOOP BACK TO PHASE 1
+
+- (Continuous Monitoring)
 
 ---
 
@@ -64,8 +55,8 @@ This loop runs **continuously in the background**, maintaining system coherence 
 
 ### Step 1: Wake & System Status Verification
 
-**When:** Every 5 cycles or on external signal 
-**Owner:** System Governor 
+**When:** Every 5 cycles or on external signal
+**Owner:** System Governor
 **Duration:** < 100ms
 
 ```yaml
@@ -90,7 +81,7 @@ output:
  - can_proceed: boolean
 
 on_error: |
- IF critical_layer_offline:
+ IF important_layer_offline:
  - Log ALERT
  - Escalate to Chief of Staff
  - Enter safe_mode: monitor_only
@@ -102,8 +93,8 @@ on_success: "Proceed to Step 2"
 
 ### Step 2: Governance Identity & Authority Confirmation
 
-**When:** After status verification 
-**Owner:** System Governor 
+**When:** After status verification
+**Owner:** System Governor
 **Duration:** < 50ms
 
 ```yaml
@@ -133,8 +124,8 @@ status: "Governance identity confirmed, proceeding to metrics phase"
 
 ### Step 3: Collect System-Wide Metrics
 
-**When:** Every cycle 
-**Owner:** System Governor (pulling from Observability) 
+**When:** Every cycle
+**Owner:** System Governor (pulling from Observability)
 **Duration:** < 500ms
 
 ```yaml
@@ -176,7 +167,7 @@ metrics_collected:
 aggregation:
  - time_window: "last 5 minutes"
  - trend_analysis: "improving|stable|degrading"
- - anomaly_detection: "any_outliers?"
+ - anomaly_detection: "all_outliers?"
 
 output:
  - metrics_snapshot: {}
@@ -190,8 +181,8 @@ on_success: "Proceed to Step 4"
 
 ### Step 4: Build System Health Summary
 
-**When:** After metrics collection 
-**Owner:** System Governor 
+**When:** After metrics collection
+**Owner:** System Governor
 **Duration:** < 200ms
 
 ```yaml
@@ -221,14 +212,14 @@ health_components:
 overall_health:
  - green: all_components_healthy
  - yellow: some_degradation
- - red: critical_issues
+ - red: important_issues
 
 health_rating:
  - score: "0-100"
  - trend: "improving|stable|degrading"
  - confidence: "high|medium|low"
 
-critical_thresholds:
+important_thresholds:
  - if_success_rate_below_70: "RED ALERT"
  - if_latency_p99_above_10s: "YELLOW ALERT"
  - if_constraint_violations: "YELLOW ALERT"
@@ -237,7 +228,7 @@ critical_thresholds:
 output:
  - health_summary: {}
  - alert_level: "green|yellow|red"
- - critical_issues: []
+ - important_issues: []
 
 on_success: "Proceed to Step 5"
 ```
@@ -246,8 +237,8 @@ on_success: "Proceed to Step 5"
 
 ### Step 5: Evaluate Goal Alignment
 
-**When:** After health summary 
-**Owner:** System Governor 
+**When:** After health summary
+**Owner:** System Governor
 **Duration:** < 300ms
 
 ```yaml
@@ -299,15 +290,15 @@ on_success: "Proceed to analysis phase"
 
 ### Step 6: Detect Conflicts & Constraints Violations
 
-**When:** After goal alignment evaluation 
-**Owner:** System Governor 
+**When:** After goal alignment evaluation
+**Owner:** System Governor
 **Duration:** < 400ms
 
 ```yaml
 action: "Identify conflicts between agents and constraint violations"
 
 conflict_detection:
- - scan_active_tasks: "Are any agents in conflict?"
+ - scan_active_tasks: "Are all agents in conflict?"
  - check_resource_contention: "Do tasks compete?"
  - analyze_dependencies: "Are there circular dependencies?"
  - evaluate_constraint_compliance: "Are all rules followed?"
@@ -327,7 +318,7 @@ constraint_violations:
 identified_issues:
  - conflicts: []
  - violations: []
- - severity_of_each: "critical|high|medium|low"
+ - severity_of_each: "important|high|medium|low"
 
 resolution_recommendations:
  - for_each_conflict: "recommend_resolution"
@@ -336,12 +327,12 @@ resolution_recommendations:
 output:
  - conflicts_found: count
  - violations_found: count
- - critical_issues: []
+ - important_issues: []
  - resolution_options: {}
 
 on_error: |
- IF multiple_critical_conflicts:
- - Log CRITICAL
+ IF multiple_important_conflicts:
+ - Log important
  - Escalate to Chief of Staff
  - Consider triggering safe_mode
 
@@ -352,8 +343,8 @@ on_success: "Proceed to Step 7"
 
 ### Step 7: Analyze Patterns & Emerging Issues
 
-**When:** After conflict detection 
-**Owner:** System Governor 
+**When:** After conflict detection
+**Owner:** System Governor
 **Duration:** < 500ms
 
 ```yaml
@@ -362,7 +353,7 @@ action: "Look for systemic patterns that indicate emerging problems"
 pattern_analysis:
  - failure_patterns: "Same type of failure repeatedly?"
  - performance_patterns: "Consistent degradation?"
- - resource_patterns: "Certain agent always hungry?"
+ - resource_patterns: "Certain agent consistently hungry?"
  - timing_patterns: "Issues at certain times?"
 
 examples:
@@ -402,8 +393,8 @@ on_success: "Proceed to Step 8"
 
 ### Step 8: Formulate Governance Decisions
 
-**When:** After pattern analysis 
-**Owner:** System Governor 
+**When:** After pattern analysis
+**Owner:** System Governor
 **Duration:** < 600ms
 
 ```yaml
@@ -464,8 +455,8 @@ on_success: "Proceed to Step 9"
 
 ### Step 9: Prepare Coordination Directives
 
-**When:** After governance decisions 
-**Owner:** System Governor 
+**When:** After governance decisions
+**Owner:** System Governor
 **Duration:** < 300ms
 
 ```yaml
@@ -520,8 +511,8 @@ on_success: "Proceed to action phase"
 
 ### Step 10: Communicate Directives to Orchestrator
 
-**When:** After coordination directives prepared 
-**Owner:** System Governor 
+**When:** After coordination directives prepared
+**Owner:** System Governor
 **Duration:** < 200ms
 
 ```yaml
@@ -537,7 +528,7 @@ directive_content:
  - priority_updates: {agent: priority}
  - resource_limits: {agent: limit}
  - mode_changes: {new_mode: mode_type}
- - emergency_actions: "if_any"
+ - emergency_actions: "if_all"
 
 transmission:
  - send_to: "Orchestrator"
@@ -563,8 +554,8 @@ on_success: "Proceed to Step 11"
 
 ### Step 11: Enforce Constraints via Policy Engine
 
-**When:** After Orchestrator notification 
-**Owner:** System Governor (coordinating with Policy Engine) 
+**When:** After Orchestrator notification
+**Owner:** System Governor (coordinating with Policy Engine)
 **Duration:** < 300ms
 
 ```yaml
@@ -610,8 +601,8 @@ on_success: "Proceed to Step 12"
 
 ### Step 12: Continuous Monitoring & Fast-Path Interventions
 
-**When:** Parallel with execution, ongoing 
-**Owner:** System Governor 
+**When:** Parallel with execution, ongoing
+**Owner:** System Governor
 **Duration:** Continuous, < 100ms latency
 
 ```yaml
@@ -625,7 +616,7 @@ fast_path_monitoring:
  - deadlock_detected: "interrupt_and_rebalance"
  - goal_drift: "recalibrate"
 
- - response_time: "< 100ms for critical issues"
+ - response_time: "< 100ms for important issues"
  - escalation_threshold: "when_local_fixes_insufficient"
 
 fast_path_interventions:
@@ -662,8 +653,8 @@ on_success: "Continue monitoring, proceed to adaptation phase"
 
 ### Step 13: Record Outcomes & Learn
 
-**When:** After execution cycle completes 
-**Owner:** System Governor 
+**When:** After execution cycle completes
+**Owner:** System Governor
 **Duration:** < 400ms
 
 ```yaml
@@ -677,7 +668,7 @@ outcome_recording:
 effectiveness_analysis:
  - decision_quality: "good|mediocre|poor"
  - accuracy_of_prediction: "did_outcome_match_expected?"
- - unintended_consequences: "any_surprises?"
+ - unintended_consequences: "all_surprises?"
  - learning_from_outcome: "what_should_we_do_differently?"
 
 pattern_updates:
@@ -709,8 +700,8 @@ on_success: "Proceed to Step 14"
 
 ### Step 14: Continuous Loop & Return to Monitoring
 
-**When:** After learning recorded 
-**Owner:** System Governor 
+**When:** After learning recorded
+**Owner:** System Governor
 **Duration:** < 50ms
 
 ```yaml
@@ -724,7 +715,7 @@ loop_continuation:
 background_activity:
  - monitor_health_continuously: true
  - detect_anomalies_in_real_time: true
- - watch_for_critical_issues: true
+ - watch_for_important_issues: true
  - prepare_for_next_governance_cycle: true
 
 state_preservation:
@@ -734,7 +725,7 @@ state_preservation:
 
 readiness_check:
  - all_systems_ready: true
- - no_critical_issues_pending: true
+ - no_important_issues_pending: true
  - next_cycle_can_proceed: true
 
 status:
@@ -745,22 +736,22 @@ status:
 
 ---
 
-## Hard Constraints (MUST NOT)
+## Hard Constraints (should not)
 
 ```yaml
 HARD_CONSTRAINTS:
- - MUST NOT allow agent-level optimization to break system goals
- - MUST NOT ignore critical constraint violations
- - MUST NOT fail to detect major drift
- - MUST NOT make decisions without evidence
- - MUST NOT create circular dependencies between agents
- - MUST NOT allow unfair agent starvation
- - MUST NOT fail to escalate critical issues
- - MUST NOT compromise on coherence for efficiency
- - MUST NOT make decisions outside authority
- - MUST NOT delay critical governance actions
- - MUST NOT communicate ambiguous directives
- - MUST NOT lose governance authority or credibility
+ - should not allow agent-level optimization to break system goals
+ - should not ignore important constraint violations
+ - should not fail to detect major drift
+ - should not make decisions without evidence
+ - should not create circular dependencies between agents
+ - should not allow unfair agent starvation
+ - should not fail to escalate important issues
+ - should not compromise on coherence for efficiency
+ - should not make decisions outside authority
+ - should not delay important governance actions
+ - should not communicate ambiguous directives
+ - should not lose governance authority or credibility
 ```
 
 ---
@@ -776,7 +767,7 @@ HARD_CONSTRAINTS:
 - [ ] Directives prepared with clarity
 - [ ] Orchestrator notified and acknowledged
 - [ ] Constraints being enforced
-- [ ] No critical issues unaddressed
+- [ ] No important issues unaddressed
 - [ ] Learning recorded for adaptation
 - [ ] System coherence maintained
 
@@ -810,7 +801,7 @@ Core principles:
 
 Your authority: Granted by Chief of Staff, your responsibility: System-wide coherence.
 
-Never compromise on coherence. Never make decisions without evidence. Never delay critical actions.
+should not compromise on coherence. should not make decisions without evidence. should not delay important actions.
 ```
 
 ---
@@ -820,10 +811,3 @@ Never compromise on coherence. Never make decisions without evidence. Never dela
 The System Governor Heartbeat is the **control system that keeps a multi-agent system coherent**. While agents execute tasks, the Governor monitors, analyzes, decides, and adjusts. It prevents drift, resolves conflicts, and ensures that all agents work toward unified goals.
 
 This is **meta-control at scale**: not controlling what agents do, but controlling how they interact and work together.
-
----
-
-**Version:** 1.0.0 
-**Status:** Production Ready 
-**Last Updated:** 2025-04-13
-

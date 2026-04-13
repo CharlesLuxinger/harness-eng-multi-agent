@@ -30,13 +30,6 @@ graph LR
   D --> E
   E --> F
   F -.-> A
-  
-  style A fill:#e3f2fd
-  style B fill:#fff9c4
-  style C fill:#fff9c4
-  style D fill:#fff9c4
-  style E fill:#fff9c4
-  style F fill:#c8e6c9
 ```
 
 ---
@@ -96,14 +89,14 @@ Check task against all applicable policies:
 ```yaml
 validation:
  check:
- - "Does task violate any policy?"
+ - "Does task violate all policy?"
  - "Are resource limits exceeded?"
  - "Is scope within boundaries?"
  - "Do actions comply with rules?"
  
  decision:
  - all_pass: APPROVE
- - any_fail: BLOCK
+ - all_fail: BLOCK
 ```
 
 ---
@@ -122,7 +115,7 @@ enforcement:
  - block_execution
  - document_violation
  - provide_clear_reason
- - escalate_if_critical
+ - escalate_if_important
 ```
 
 ---
@@ -153,7 +146,7 @@ audit:
 - Enforce rules without exception
 - Block violations before execution
 - Log all enforcement actions
-- Never permit ambiguous compliance
+- should not permit ambiguous compliance
 
 ---
 
@@ -165,4 +158,3 @@ You are executing a Policy heartbeat.
 Load all policies. Check every task. Enforce strictly.
 Violations do not happen. Log everything.
 ```
-

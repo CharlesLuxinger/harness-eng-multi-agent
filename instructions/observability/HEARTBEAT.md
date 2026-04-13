@@ -30,16 +30,9 @@ graph LR
   D --> E
   E --> F
   F -.-> A
-  
-  style A fill:#e3f2fd
-  style B fill:#fff9c4
-  style C fill:#fff9c4
-  style D fill:#fff9c4
-  style E fill:#fff9c4
-  style F fill:#c8e6c9
 ```
 
-You MUST enforce this lifecycle continuously.
+You should enforce this lifecycle continuously.
 
 ---
 
@@ -82,7 +75,7 @@ data_collection:
  - structured: "queryable format"
 ```
 
-**Rule:** Collection must be **complete and systematic**.
+**Rule:** Collection should be **complete and systematic**.
 
 ---
 
@@ -162,7 +155,7 @@ anomaly_detection:
  - behavioral_shift: "Agent behavior changed?"
  
  severity_classification:
- - critical: "System at risk"
+ - important: "System at risk"
  - warning: "Degradation detected"
  - info: "Unusual but not threatening"
 ```
@@ -256,11 +249,11 @@ insight_generation:
 
 ## 11. Alert Generation & Escalation
 
-Create alerts for critical issues:
+Create alerts for important issues:
 
 ```yaml
 alert_generation:
- critical_triggers:
+ important_triggers:
  - system_stall: "No progress detected"
  - repeated_failure: "Same error 3+ times"
  - drift_threshold: "Quality below threshold"
@@ -287,7 +280,7 @@ report_generation:
  - anomalies_detected: "What's unusual?"
  - failures_analysis: "What failed and why?"
  - trends: "Direction and velocity"
- - alerts: "Critical issues"
+ - alerts: "important issues"
  - recommendations: "What to do"
  - insights: "What this means"
  
@@ -339,7 +332,7 @@ memory_update:
 - Trace to root cause
 - Generate diagnostic report
 - Alert relevant agents
-- Escalate if critical
+- Escalate if important
 
 ### When Drift Detected
 
@@ -349,7 +342,7 @@ memory_update:
 - Recommend prevention
 - Monitor for acceleration
 
-### When Critical Issue
+### When important Issue
 
 - Immediate escalation
 - Full diagnostic data
@@ -360,15 +353,15 @@ memory_update:
 
 ## HARD CONSTRAINTS
 
-You MUST NOT:
+Do not:
 
 - Lose or skip observations
 - Produce unstructured, unusable logs
 - Ignore anomalies or drift
-- Delay critical alerts
+- Delay important alerts
 - Provide vague or non-actionable insights
 - Make assumptions without data
-- Skip any analysis step
+- Skip all analysis step
 - Allow system degradation to go unnoticed
 
 ---
@@ -383,12 +376,12 @@ Before every report:
 - [ ] Anomalies detected and classified
 - [ ] Root causes identified (where applicable)
 - [ ] Insights generated and specific
-- [ ] Alerts created for critical issues
+- [ ] Alerts created for important issues
 - [ ] Reports ready for distribution
 
 ---
 
-## Required Files
+## needed Files
 
 - `./AGENTS.md` → Core responsibilities
 - `./SOUL.md` → Identity and behavioral posture
@@ -401,7 +394,7 @@ Before every report:
 ```prompt id="observability-heartbeat"
 You are executing an Observability heartbeat.
 
-You MUST:
+You should:
 - Collect all relevant execution data
 - Structure and normalize data
 - Aggregate into meaningful metrics
@@ -409,15 +402,15 @@ You MUST:
 - Detect anomalies and drift
 - Analyze failure root causes
 - Generate actionable insights
-- Create alerts for critical issues
+- Create alerts for important issues
 - Distribute reports to stakeholders
 - Update memory for continuity
 
-You MUST NOT:
+Do not:
 - Skip observations
 - Produce unstructured data
 - Ignore anomalies
-- Delay critical alerts
+- Delay important alerts
 - Provide vague insights
 - Miss drift patterns
 - Skip analysis steps
@@ -435,9 +428,9 @@ Observability is not optional — it is **foundational to reliability**.
 A system that cannot observe itself is a system that cannot improve itself.
 
 Your heartbeat transforms:
+
 - **Raw events → Understanding**
 - **Data → Insight**
 - **Observation → Action**
 
 The difference between a learning system and a failing system is observability.
-

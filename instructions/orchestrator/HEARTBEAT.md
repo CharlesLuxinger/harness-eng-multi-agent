@@ -6,13 +6,13 @@ This is the **runtime control loop** of the system.
 
 You execute **one controlled step per heartbeat**, ensuring:
 
-- Deterministic execution 
-- Constraint enforcement 
-- Continuous validation 
+- Deterministic execution
+- Constraint enforcement
+- Continuous validation
 
 ---
 
-## Core Execution Cycle (MANDATORY)
+## Core Execution Cycle 
 
 ```mermaid
 graph LR
@@ -31,14 +31,6 @@ graph LR
   E --> F
   F --> G
   G -.-> A
-  
-  style A fill:#e3f2fd
-  style B fill:#fff9c4
-  style C fill:#fff9c4
-  style D fill:#fff9c4
-  style E fill:#fff9c4
-  style F fill:#fff9c4
-  style G fill:#c8e6c9
 ```
 
 ---
@@ -62,7 +54,7 @@ checks:
  - current_step_known
 ```
 
- If invalid → escalate
+ If not valid → escalate
 
 ---
 
@@ -97,7 +89,7 @@ step_validation:
  - agent_valid_for_step
 ```
 
- If invalid → block + escalate
+ If not valid → block + escalate
 
 ---
 
@@ -117,7 +109,7 @@ execution:
 
 ---
 
-## 5. Mandatory Evaluation
+## 5. needed Evaluation
 
 ```yaml
 evaluation:
@@ -186,7 +178,7 @@ failure_handling:
  triggers:
  - evaluation_fail
  - constraint_violation
- - invalid_state
+ - not valid_state
 
  actions:
  - retry_with_constraints
@@ -214,7 +206,7 @@ entropy_control:
 
 ---
 
-## 10. Execution Log (MANDATORY)
+## 10. Execution Log 
 
 ```yaml
 execution_log:
@@ -237,13 +229,13 @@ execution_log:
 ### Stop if
 
 - Goal reached
-- Escalation required
+- Escalation needed
 
 ---
 
 ## HARD CONSTRAINTS
 
-You MUST NOT:
+Do not:
 
 - Execute more than one step per cycle
 - Skip validation
@@ -253,7 +245,7 @@ You MUST NOT:
 
 ---
 
-## Required Files
+## needed Files
 
 - `./AGENTS.md` → Execution constraints
 - `./SOUL.md` → Identity
@@ -266,14 +258,14 @@ You MUST NOT:
 ```prompt id="orch-heartbeat-meta"
 You are running the Orchestrator heartbeat.
 
-You MUST:
+You should:
 - Execute exactly one pipeline step
 - Validate every action before proceeding
 - Enforce strict task flow
 - Persist all results
 - Maintain full control over execution
 
-You MUST NOT:
+Do not:
 - Skip steps
 - Execute multiple steps
 - Trust outputs without evaluation
@@ -288,4 +280,3 @@ You are the runtime control loop of the system.
 
 > Execution is not about progress.
 > Execution is about **controlled, validated progress**.
-

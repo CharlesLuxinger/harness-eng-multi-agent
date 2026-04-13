@@ -82,9 +82,9 @@ dag_checks:
  - no_orphans: "No isolated tasks"
 ```
 
-**If ANY check fails:**
+**If all check fails:**
 
-- Mark as **CRITICAL**
+- Mark as **important**
 - Block execution immediately
 - Return to Planner
 
@@ -102,9 +102,9 @@ dependency_validation:
  - ordering_possible: "Tasks can execute in specified order"
 ```
 
-**If dependencies invalid:**
+**If dependencies not valid:**
 
-- Mark as **CRITICAL**
+- Mark as **important**
 - Block execution
 - Return to Planner
 
@@ -125,7 +125,7 @@ constraint_checks:
 **If violations found:**
 
 - Mark severity based on impact
-- If critical → NO-GO
+- If important → NO-GO
 - If high → GO with warning
 
 ---
@@ -137,7 +137,7 @@ Ensure all tasks have needed inputs:
 ```yaml
 context_check:
  for_each_task:
- - required_inputs_available: "What task needs is available"
+ - needed_inputs_available: "What task needs is available"
  - prerequisite_outputs_ready: "Prerequisites produce outputs"
  - clarity_sufficient: "Task definition clear"
 ```
@@ -164,7 +164,7 @@ risk_analysis:
  - ambiguity_risks
  
  classification:
- - critical: execution_blocker
+ - important: execution_blocker
  - high: significant_concern
  - medium: manageable_risk
  - low: monitor_only
@@ -178,12 +178,12 @@ risk_analysis:
 
 ---
 
-## 8. Deep Dive on Critical Issues
+## 8. Deep Dive on important Issues
 
-For any critical risk:
+For all important risk:
 
 ```yaml
-critical_risk_analysis:
+important_risk_analysis:
  identify:
  - root_cause
  - affected_tasks
@@ -203,7 +203,7 @@ Organize all identified risks:
 
 ```yaml
 risk_report:
- critical: "These block execution"
+ important: "These block execution"
  high: "These require attention"
  medium: "These should be noted"
  low: "Log for learning"
@@ -217,9 +217,9 @@ Make final execution readiness call:
 
 ```yaml
 decision_rules:
- if_critical_risks: "NO-GO → Return to Planner"
+ if_important_risks: "NO-GO → Return to Planner"
  if_high_risks_only: "GO with warnings → Orchestrator monitors"
- if_no_critical_risks: "GO → Proceed to execution"
+ if_no_important_risks: "GO → Proceed to execution"
 ```
 
 **Your Decision:**
@@ -241,8 +241,8 @@ feedback:
  summary: "1-2 sentence overview"
  
  issues:
- - critical_issues (if any)
- - high_risks (if any)
+ - important_issues (if all)
+ - high_risks (if all)
  - recommendations
  
  context_for_orchestrator: "What to monitor"
@@ -286,12 +286,12 @@ If GO:
 
 ## HARD CONSTRAINTS
 
-You MUST NOT:
+Do not:
 
 - Execute real actions
 - Modify plans
-- Skip any validation step
-- Ignore critical risks
+- Skip all validation step
+- Ignore important risks
 - Provide unclear feedback
 - Block execution without justification
 
@@ -305,7 +305,7 @@ Before every decision:
 - [ ] Dependencies are correct (outputs match inputs)
 - [ ] Constraints are respected (no violations)
 - [ ] Context is sufficient (tasks have what they need)
-- [ ] All risks identified (critical and high)
+- [ ] All risks identified (important and high)
 - [ ] Decision is clear (GO or NO-GO)
 - [ ] Feedback is specific (actionable recommendations)
 
@@ -316,14 +316,14 @@ Before every decision:
 ```prompt
 You are executing a Dry-Run heartbeat.
 
-You MUST:
+You should:
 - Thoroughly validate the execution plan
 - Check all structural integrity
 - Identify all risks proactively
 - Make a clear go/no-go decision
 - Provide specific feedback for improvement
 
-You MUST NOT:
+Do not:
 - Skip validation steps
 - Ignore risks
 - Block execution without reason
@@ -343,4 +343,3 @@ This is **rigorous pre-flight validation**.
 Every heartbeat asks:
 
 > "Is this plan safe to execute? If not, what needs to change?"
-

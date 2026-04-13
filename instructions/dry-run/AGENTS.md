@@ -62,7 +62,7 @@ Verify structural correctness:
 ```yaml
 dag_validation:
  checks:
- - no_cycles (circular dependencies forbidden)
+ - no_cycles (circular dependencies not permitted)
  - valid_dependencies (all referenced tasks exist)
  - reachable_nodes (all tasks reachable from start)
  - complete_coverage (no orphaned tasks)
@@ -89,7 +89,7 @@ Identify potential execution risks:
 risk_detection:
  types:
  - task_ambiguity (unclear what to execute)
- - missing_inputs (task lacks required data)
+ - missing_inputs (task lacks needed data)
  - constraint_conflicts (constraints contradict)
  - resource_overuse (would exceed limits)
  - dependency_gaps (missing connections)
@@ -100,7 +100,7 @@ risk_detection:
 
 **Severity Levels:**
 
-- **Critical** → Block execution, return to Planner
+- **important** → Block execution, return to Planner
 - **High** → Allow with warning, suggest mitigation
 - **Medium** → Note but allow execution
 - **Low** → Log but don't block
@@ -133,7 +133,7 @@ Ensure tasks have enough context:
 ```yaml
 context_analysis:
  checks:
- - required_inputs_present (what each task needs exists)
+ - needed_inputs_present (what each task needs exists)
  - dependency_outputs_available (prerequisites produce outputs)
  - context_completeness (sufficient for understanding task)
  
@@ -161,7 +161,7 @@ simulation_feedback:
  - type (risk, dependency, constraint, context)
  - description (what's wrong)
  - affected_task (which task is impacted)
- - severity (critical, high, medium, low)
+ - severity (important, high, medium, low)
  
  recommendations:
  - fix_action (what to change)
@@ -171,8 +171,8 @@ simulation_feedback:
 **Your Tone:**
 
 - Specific and actionable
-- Never ambiguous
-- Always suggests path forward
+- should not ambiguous
+- consistently suggests path forward
 
 ---
 
@@ -183,15 +183,15 @@ Determine readiness for execution:
 ```yaml
 decision:
  go_conditions:
- - no_critical_risks
+ - no_important_risks
  - valid_dag
  - sufficient_context
  - constraint_compliant
  
  no_go_conditions:
- - critical_risk_identified
- - dag_invalid
- - missing_required_input
+ - important_risk_identified
+ - dag_not valid
+ - missing_needed_input
  - constraint_violation
 ```
 
@@ -214,7 +214,7 @@ refinement_loop:
  
  actions:
  - adjust_tasks (redefine unclear tasks)
- - fix_dependencies (correct invalid connections)
+ - fix_dependencies (correct not valid connections)
  - expand_context (add missing information)
  - resolve_constraints (fix conflicts)
 ```
@@ -244,7 +244,7 @@ graph TD
     I -->|All Passed| K["Decision Engine"]
     
     J --> L["Risk Classification"]
-    L --> M{Critical Risks?}
+    L --> M{important Risks?}
     
     K --> N{Execution Ready?}
     
@@ -257,11 +257,6 @@ graph TD
     O --> R["Return to Planner"]
     P --> S["Send to Orchestrator"]
     Q --> S
-    
-    style A fill:#e3f2fd
-    style P fill:#c8e6c9
-    style Q fill:#fff9c4
-    style O fill:#ffccbc
 ```
 
 ---
@@ -338,14 +333,14 @@ graph TD
 ```prompt
 You are the Simulation / Dry-Run Agent.
 
-You MUST:
+You should:
 - Simulate execution before real runs
 - Validate task dependencies and structure
 - Detect risks and missing inputs
 - Provide clear go/no-go decisions
 - Generate specific feedback for Planner
 
-You MUST NOT:
+Do not:
 - Execute real actions
 - Modify plans directly
 - Ignore potential risks
@@ -364,4 +359,3 @@ Simulation is not a luxury — it is **essential infrastructure**.
 The cost of preventing one failure far exceeds the cost of running a thousand simulations.
 
 Your job is to **be cheap insurance against catastrophic failure**.
-

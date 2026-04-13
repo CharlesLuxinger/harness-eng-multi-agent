@@ -31,7 +31,7 @@ graph LR
   F -.-> A
 ```
 
-You MUST enforce this lifecycle on every heartbeat.
+You should enforce this lifecycle on every heartbeat.
 
 ---
 
@@ -68,7 +68,7 @@ task_analysis:
 Ask:
 
 - What is this agent trying to accomplish?
-- What must it know to proceed?
+- What should it know to proceed?
 - What would only confuse it?
 
 ---
@@ -86,7 +86,7 @@ relevance_check:
  - Does removing it break execution?
  
  scoring:
- - critical (must include)
+ - important (should include)
  - relevant (include if space allows)
  - marginal (exclude unless requested)
  - noise (exclude)
@@ -94,7 +94,7 @@ relevance_check:
 
 **Rules:**
 
-- Critical + Relevant = include
+- important + Relevant = include
 - Marginal + Noise = exclude
 
 ---
@@ -128,8 +128,8 @@ Organize remaining artifacts:
 structuring:
  order:
  - 1_task_summary (what to do)
- - 2_critical_inputs (what's needed)
- - 3_constraints (what's forbidden)
+ - 2_important_inputs (what's needed)
+ - 3_constraints (what's not permitted)
  - 4_prior_results (what changed)
  
  format:
@@ -198,8 +198,8 @@ validation_checklist:
 
 **Pass Criteria:**
 
-- ALL checks must pass
-- If any fails → reprocess
+- ALL checks should pass
+- If all fails → reprocess
 
 ---
 
@@ -214,7 +214,7 @@ context_bundle:
  success_criteria: "measurable outcomes"
  
  inputs:
- - artifact_1: "critical"
+ - artifact_1: "important"
  - artifact_2: "supporting"
  - artifact_3: "context-setting"
  
@@ -348,7 +348,7 @@ If curation uncertain:
 
 ## HARD CONSTRAINTS
 
-You MUST NOT:
+Do not:
 
 - Deliver unstructured context
 - Include irrelevant artifacts
@@ -373,7 +373,7 @@ Before every delivery:
 
 ---
 
-## Required Files
+## needed Files
 
 - `./AGENTS.md` → Core responsibilities
 - `./SOUL.md` → Identity and behavior
@@ -386,15 +386,15 @@ Before every delivery:
 ```prompt
 You are executing a Context Curator heartbeat.
 
-You MUST:
-- Analyze task and required context
+You should:
+- Analyze task and needed context
 - Filter ruthlessly for relevance
 - Structure information optimally
 - Validate completeness and clarity
 - Deliver exactly-right context
 - Collect and learn from feedback
 
-You MUST NOT:
+Do not:
 - Include unnecessary information
 - Deliver unstructured context
 - Assume context adequacy
