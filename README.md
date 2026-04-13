@@ -144,6 +144,10 @@ Improves efficiency and system performance.
   → `agents/resource-optimization.md`  
   Optimizes tokens, compute, and execution time
 
+- **State Manager Agent**  
+  → `agents/state-manager.md`  
+  Persistence and Context Rehydration
+
 ---
 
 ### 6. 🧠 Governance Layer

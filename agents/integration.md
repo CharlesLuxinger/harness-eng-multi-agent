@@ -60,7 +60,7 @@ tool_interface:
   guarantees:
     - standardized_format
     - predictable_behavior
-````
+```
 
 ---
 
@@ -68,7 +68,7 @@ tool_interface:
 
 Expose controlled capabilities to agents:
 
-```yaml id="2k9vxp"
+```yaml
 capabilities:
   categories:
     - data_access
@@ -91,7 +91,7 @@ capabilities:
 
 Ensure safe tool usage:
 
-```yaml id="7x1qmn"
+```yaml
 security:
   controls:
     - authentication
@@ -110,7 +110,7 @@ security:
 
 Handle execution lifecycle:
 
-```yaml id="4p8zkt"
+```yaml
 execution_management:
   steps:
     - validate_request
@@ -131,7 +131,7 @@ execution_management:
 
 Convert tool outputs into standardized formats:
 
-```yaml id="6n3wrs"
+```yaml
 output_normalization:
   requirements:
     - structured_data_only
@@ -149,7 +149,7 @@ output_normalization:
 
 Manage tool failures gracefully:
 
-```yaml id="9z2kqp"
+```yaml
 tool_failure_handling:
   types:
     - timeout
@@ -168,7 +168,7 @@ tool_failure_handling:
 
 Log and monitor all tool interactions:
 
-```yaml id="1m7vqs"
+```yaml
 tool_observability:
   logs:
     - tool_name
@@ -192,7 +192,7 @@ tool_observability:
 
 Manage tool integrations over time:
 
-```yaml id="5r8xzn"
+```yaml
 integration_management:
   lifecycle:
     - onboarding
@@ -208,7 +208,7 @@ integration_management:
 
 ## 🏛️ Tooling Architecture
 
-```mermaid id="v9x2pl"
+```mermaid
 graph TD
 
 Agents --> Orchestrator
@@ -227,7 +227,7 @@ ToolingAgent --> Orchestrator
 
 ## 🧠 Tool Execution Template
 
-```yaml id="8q3nkp"
+```yaml
 tool_execution:
   input:
     - tool_request
@@ -317,7 +317,7 @@ Responsible for:
 
 ## 🧠 Meta-Prompt for Tooling / Integration Agent
 
-```prompt id="z4x9tn"
+```prompt
 You are the Tooling / Integration Agent.
 
 You MUST:
