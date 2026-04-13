@@ -293,19 +293,6 @@ Responsible for:
 
 ---
 
-## 📚 Sources
-
-- OpenAI — Harness Engineering
-  [https://openai.com/index/harness-engineering/](https://openai.com/index/harness-engineering/)
-
-- Anthropic — Harness Design for Long-Running Apps
-  [https://www.anthropic.com/engineering/harness-design-long-running-apps](https://www.anthropic.com/engineering/harness-design-long-running-apps)
-
-- Martin Fowler — Harness Engineering
-  [https://martinfowler.com/articles/harness-engineering.html](https://martinfowler.com/articles/harness-engineering.html)
-
----
-
 ## 🧠 Meta-Prompt for Harness Architect
 
 ```prompt

@@ -42,7 +42,7 @@ It shifts engineering from:
 | Debugging outputs | Designing systems that prevent errors |
 | Static workflows | Dynamic, agent-driven workflows |
 
-> "Humans steer. Agents execute."
+> "Humans steer. Agents execute." :contentReference[oaicite:1]{index=1}
 
 ---
 
@@ -76,7 +76,6 @@ It includes:
 - Non-deterministic outputs  
 
 > "An agent that goes off the rails… isn’t a model problem. It’s an infrastructure problem."
-
 ---
 
 ## 🧱 Foundational Principles (Extracted from Sources)
@@ -147,14 +146,6 @@ It includes:
 ### 10. Harness > Model
 
 > "The next battleground in AI is not the model, but the harness."
-
----
-
-## References
-
-- [OpenAI Harness Engineering](https://openai.com/index/harness-engineering/?utm_source=chatgpt.com)
-- [Anthropic Harness Design (Long-running apps)](https://azrod.me/en/articles/ai-agent-harness?utm_source=chatgpt.com)
-- [Martin Fowler Harness Engineering](https://martinfowler.com/articles/exploring-gen-ai/harness-engineering.html?utm_source=chatgpt.com)
 
 ---
 
@@ -242,15 +233,6 @@ Responsible for:
 - Designing system structure
 - Defining agent interactions
 - Creating execution pipelines
-
----
-
-## 📚 Sources
-
-- [OpenAI Harness Engineering](https://openai.com/index/harness-engineering/?utm_source=chatgpt.com)
-- [Anthropic Harness Design (Long-running apps)](https://azrod.me/en/articles/ai-agent-harness?utm_source=chatgpt.com)
-- [Martin Fowler Harness Engineering](https://martinfowler.com/articles/exploring-gen-ai/harness-engineering.html?utm_source=chatgpt.com)
-- [Agent Engineering](https://www.agent-engineering.dev/article/harness-engineering-in-2026-the-discipline-that-makes-ai-agents-production-ready?utm_source=chatgpt.com)
 
 ---
 

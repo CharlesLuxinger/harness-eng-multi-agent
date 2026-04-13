@@ -248,19 +248,19 @@ tool_execution:
 
 ### ✅ DO
 
-* Enforce **strict access control**
-* Standardize all tool interfaces
-* Log every interaction
-* Normalize outputs for consistency
+- Enforce **strict access control**
+- Standardize all tool interfaces
+- Log every interaction
+- Normalize outputs for consistency
 
 ---
 
 ### ❌ DON'T
 
-* Allow direct agent-to-tool access
-* Expose raw or unstructured outputs
-* Ignore tool failures
-* Grant excessive permissions
+- Allow direct agent-to-tool access
+- Expose raw or unstructured outputs
+- Ignore tool failures
+- Grant excessive permissions
 
 ---
 
@@ -268,38 +268,38 @@ tool_execution:
 
 ### 1. Tool Interface Layer
 
-* Unified API abstraction
-* Standard request/response formats
+- Unified API abstraction
+- Standard request/response formats
 
 ### 2. Capability Registry
 
-* Defined tool access per agent
-* Permission management
+- Defined tool access per agent
+- Permission management
 
 ### 3. Execution Engine
 
-* Tool invocation lifecycle
-* Error handling
+- Tool invocation lifecycle
+- Error handling
 
 ### 4. Observability System
 
-* Tool usage logs
-* Performance metrics
+- Tool usage logs
+- Performance metrics
 
 ---
 
 ## 🔗 Dependencies
 
-### Input From:
+### Input From
 
-* Orchestrator → Tool requests
-* Constraint Engine → Access policies
+- Orchestrator → Tool requests
+- Constraint Engine → Access policies
 
-### Output To:
+### Output To
 
-* Orchestrator → Tool responses
-* Observability Agent → Logs
-* Recovery Agent → Failure signals
+- Orchestrator → Tool responses
+- Observability Agent → Logs
+- Recovery Agent → Failure signals
 
 ---
 
@@ -309,22 +309,9 @@ tool_execution:
 
 Responsible for:
 
-* Creating isolated execution environments
-* Managing runtime sandboxes
-* Ensuring safe code execution
-
----
-
-## 📚 Sources
-
-* OpenAI — Harness Engineering
-  [https://openai.com/index/harness-engineering/](https://openai.com/index/harness-engineering/)
-
-* Anthropic — Harness Design for Long-Running Apps
-  [https://www.anthropic.com/engineering/harness-design-long-running-apps](https://www.anthropic.com/engineering/harness-design-long-running-apps)
-
-* Martin Fowler — Harness Engineering
-  [https://martinfowler.com/articles/harness-engineering.html](https://martinfowler.com/articles/harness-engineering.html)
+- Creating isolated execution environments
+- Managing runtime sandboxes
+- Ensuring safe code execution
 
 ---
 
@@ -346,7 +333,4 @@ You MUST NOT:
 - Grant unnecessary permissions
 
 You are the bridge between agents and the external world.
-```
-
-```
 ```

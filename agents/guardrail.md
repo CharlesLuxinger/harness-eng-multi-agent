@@ -223,19 +223,19 @@ alignment_pipeline:
 
 ### ✅ DO
 
-* Enforce **strict intent fidelity**
-* Validate **semantics, not just syntax**
-* Block unsafe or misaligned outputs
-* Provide clear correction guidance
+- Enforce **strict intent fidelity**
+- Validate **semantics, not just syntax**
+- Block unsafe or misaligned outputs
+- Provide clear correction guidance
 
 ---
 
 ### ❌ DON'T
 
-* Assume correctness implies alignment
-* Allow subtle drift from intent
-* Ignore ethical violations
-* Pass partially correct outputs
+- Assume correctness implies alignment
+- Allow subtle drift from intent
+- Ignore ethical violations
+- Pass partially correct outputs
 
 ---
 
@@ -243,37 +243,37 @@ alignment_pipeline:
 
 ### 1. Alignment Validation System
 
-* Intent matching
-* Semantic checks
+- Intent matching
+- Semantic checks
 
 ### 2. Guardrail Enforcement Engine
 
-* Safety constraints
-* Behavior control
+- Safety constraints
+- Behavior control
 
 ### 3. Correction Guidance System
 
-* Regeneration instructions
+- Regeneration instructions
 
 ### 4. Alignment Scoring Framework
 
-* Quantitative metrics
+- Quantitative metrics
 
 ---
 
 ## 🔗 Dependencies
 
-### Input From:
+### Input From
 
-* Chief of Staff → User intent
-* Generator → Outputs
-* Evaluator → Validation results
+- Chief of Staff → User intent
+- Generator → Outputs
+- Evaluator → Validation results
 
-### Output To:
+### Output To
 
-* Orchestrator → Alignment status
-* Generator → Correction guidance
-* Constraint Engine → Policy feedback
+- Orchestrator → Alignment status
+- Generator → Correction guidance
+- Constraint Engine → Policy feedback
 
 ---
 
@@ -283,22 +283,9 @@ alignment_pipeline:
 
 Responsible for:
 
-* Overseeing all agents at a system level
-* Managing global objectives and priorities
-* Ensuring coherent system-wide behavior
-
----
-
-## 📚 Sources
-
-* OpenAI — Harness Engineering
-  [https://openai.com/index/harness-engineering/](https://openai.com/index/harness-engineering/)
-
-* Anthropic — Harness Design for Long-Running Apps
-  [https://www.anthropic.com/engineering/harness-design-long-running-apps](https://www.anthropic.com/engineering/harness-design-long-running-apps)
-
-* Martin Fowler — Harness Engineering
-  [https://martinfowler.com/articles/harness-engineering.html](https://martinfowler.com/articles/harness-engineering.html)
+- Overseeing all agents at a system level
+- Managing global objectives and priorities
+- Ensuring coherent system-wide behavior
 
 ---
 

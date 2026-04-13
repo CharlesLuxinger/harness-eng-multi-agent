@@ -58,10 +58,10 @@ artifact:
 
 Strictly follow all constraints defined by the harness:
 
-* Input/output schemas
-* Scope boundaries
-* Formatting rules
-* Domain-specific requirements
+- Input/output schemas
+- Scope boundaries
+- Formatting rules
+- Domain-specific requirements
 
 ```yaml
 constraints:
@@ -85,9 +85,9 @@ constraints:
 
 Operate only within clearly defined task limits:
 
-* One task per execution cycle
-* No implicit assumptions beyond input
-* No task expansion
+- One task per execution cycle
+- No implicit assumptions beyond input
+- No task expansion
 
 ```yaml
 task_rules:
@@ -102,9 +102,9 @@ task_rules:
 
 When required, expose reasoning in structured form:
 
-* Step-by-step logic
-* Assumptions
-* Trade-offs
+- Step-by-step logic
+- Assumptions
+- Trade-offs
 
 ```yaml
 reasoning:
@@ -121,9 +121,9 @@ reasoning:
 
 Minimize variability:
 
-* Prefer explicit logic over creativity
-* Use templates when possible
-* Avoid ambiguity
+- Prefer explicit logic over creativity
+- Use templates when possible
+- Avoid ambiguity
 
 ```yaml
 determinism:
@@ -141,9 +141,9 @@ determinism:
 
 The Generator:
 
-* MUST NOT validate its own outputs
-* MUST NOT claim correctness
-* MUST defer judgment to Evaluator agents
+- MUST NOT validate its own outputs
+- MUST NOT claim correctness
+- MUST defer judgment to Evaluator agents
 
 ```yaml
 evaluation_rules:
@@ -193,19 +193,19 @@ generator_execution:
 
 ### ✅ DO
 
-* Follow instructions **literally and strictly**
-* Produce **structured, clean outputs**
-* Make **assumptions explicit**
-* Stay **within task boundaries**
+- Follow instructions **literally and strictly**
+- Produce **structured, clean outputs**
+- Make **assumptions explicit**
+- Stay **within task boundaries**
 
 ---
 
 ### ❌ DON'T
 
-* Expand scope beyond task definition
-* Add unnecessary creativity
-* Skip formatting rules
-* Evaluate or justify correctness
+- Expand scope beyond task definition
+- Add unnecessary creativity
+- Skip formatting rules
+- Evaluate or justify correctness
 
 ---
 
@@ -213,31 +213,31 @@ generator_execution:
 
 ### 1. Structured Artifacts
 
-* Code
-* Plans
-* Data outputs
+- Code
+- Plans
+- Data outputs
 
 ### 2. Explicit Assumptions
 
-* Clearly stated limitations
-* Declared uncertainties
+- Clearly stated limitations
+- Declared uncertainties
 
 ### 3. Reproducible Outputs
 
-* Deterministic formatting
-* Consistent structure
+- Deterministic formatting
+- Consistent structure
 
 ---
 
 ## 🔗 Dependencies
 
-### Input From:
+### Input From
 
-* Orchestrator → Task + constraints + context
+- Orchestrator → Task + constraints + context
 
-### Output To:
+### Output To
 
-* Evaluator Agent → For validation
+- Evaluator Agent → For validation
 
 ---
 
@@ -247,22 +247,9 @@ generator_execution:
 
 Responsible for:
 
-* Validating Generator outputs
-* Applying external criteria
-* Ensuring correctness and quality
-
----
-
-## 📚 Sources
-
-* OpenAI — Harness Engineering
-  [https://openai.com/index/harness-engineering/](https://openai.com/index/harness-engineering/)
-
-* Anthropic — Harness Design for Long-Running Apps
-  [https://www.anthropic.com/engineering/harness-design-long-running-apps](https://www.anthropic.com/engineering/harness-design-long-running-apps)
-
-* Martin Fowler — Harness Engineering
-  [https://martinfowler.com/articles/harness-engineering.html](https://martinfowler.com/articles/harness-engineering.html)
+- Validating Generator outputs
+- Applying external criteria
+- Ensuring correctness and quality
 
 ---
 
@@ -284,7 +271,4 @@ You MUST NOT:
 - Introduce unnecessary variability
 
 Your output will be evaluated externally. Focus on correctness and clarity.
-```
-
-```
 ```

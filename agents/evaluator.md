@@ -63,10 +63,10 @@ validation:
 
 Use **objective, predefined standards**, such as:
 
-* Test cases
-* Schemas
-* Specifications
-* Business rules
+- Test cases
+- Schemas
+- Specifications
+- Business rules
 
 ```yaml id="x8lg4o"
 evaluation_criteria:
@@ -89,9 +89,9 @@ evaluation_criteria:
 
 Ensure independence:
 
-* Never trust Generator reasoning
-* Ignore self-reported correctness
-* Validate purely on evidence
+- Never trust Generator reasoning
+- Ignore self-reported correctness
+- Validate purely on evidence
 
 ```yaml id="r2kx8j"
 anti_bias_rules:
@@ -110,9 +110,9 @@ anti_bias_rules:
 
 Provide actionable, machine-readable feedback:
 
-* List of errors
-* Severity levels
-* Suggested corrections (without re-generating)
+- List of errors
+- Severity levels
+- Suggested corrections (without re-generating)
 
 ```yaml id="l0n2vp"
 feedback:
@@ -150,9 +150,9 @@ decision:
 
 Communicate next actions to Orchestrator:
 
-* Retry with constraints
-* Escalate issue
-* Approve continuation
+- Retry with constraints
+- Escalate issue
+- Approve continuation
 
 ```yaml id="y2k3sf"
 post_evaluation_actions:
@@ -170,9 +170,9 @@ post_evaluation_actions:
 
 Identify degradation patterns:
 
-* Inconsistent outputs across cycles
-* Increasing error rates
-* Format drift
+- Inconsistent outputs across cycles
+- Increasing error rates
+- Format drift
 
 ```yaml id="p8qv9m"
 drift_detection:
@@ -235,19 +235,19 @@ evaluation_execution:
 
 ### ✅ DO
 
-* Use **objective, external criteria**
-* Be **strict and deterministic**
-* Provide **clear, structured feedback**
-* Block progression on failure
+- Use **objective, external criteria**
+- Be **strict and deterministic**
+- Provide **clear, structured feedback**
+- Block progression on failure
 
 ---
 
 ### ❌ DON'T
 
-* Re-generate outputs
-* Assume intent correctness
-* Accept partial compliance
-* Allow ambiguity in decisions
+- Re-generate outputs
+- Assume intent correctness
+- Accept partial compliance
+- Allow ambiguity in decisions
 
 ---
 
@@ -255,30 +255,30 @@ evaluation_execution:
 
 ### 1. Validation Reports
 
-* Pass/fail status
-* Detailed issue list
+- Pass/fail status
+- Detailed issue list
 
 ### 2. Structured Feedback
 
-* Machine-readable corrections
-* Severity classification
+- Machine-readable corrections
+- Severity classification
 
 ### 3. Decision Signals
 
-* Continue / Retry / Escalate
+- Continue / Retry / Escalate
 
 ---
 
 ## 🔗 Dependencies
 
-### Input From:
+### Input From
 
-* Generator Agent → Artifact
-* Orchestrator → Criteria + context
+- Generator Agent → Artifact
+- Orchestrator → Criteria + context
 
-### Output To:
+### Output To
 
-* Orchestrator → Decision + feedback
+- Orchestrator → Decision + feedback
 
 ---
 
@@ -288,22 +288,9 @@ evaluation_execution:
 
 Responsible for:
 
-* Persisting artifacts and execution state
-* Managing long-term memory
-* Enabling context rehydration
-
----
-
-## 📚 Sources
-
-* OpenAI — Harness Engineering
-  [https://openai.com/index/harness-engineering/](https://openai.com/index/harness-engineering/)
-
-* Anthropic — Harness Design for Long-Running Apps
-  [https://www.anthropic.com/engineering/harness-design-long-running-apps](https://www.anthropic.com/engineering/harness-design-long-running-apps)
-
-* Martin Fowler — Harness Engineering
-  [https://martinfowler.com/articles/harness-engineering.html](https://martinfowler.com/articles/harness-engineering.html)
+- Persisting artifacts and execution state
+- Managing long-term memory
+- Enabling context rehydration
 
 ---
 

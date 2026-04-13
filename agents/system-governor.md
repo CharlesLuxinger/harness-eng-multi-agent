@@ -247,19 +247,19 @@ governance_pipeline:
 
 ### ✅ DO
 
-* Maintain **global coherence**
-* Continuously align system with **objectives**
-* Resolve conflicts proactively
-* Adapt strategy dynamically
+- Maintain **global coherence**
+- Continuously align system with **objectives**
+- Resolve conflicts proactively
+- Adapt strategy dynamically
 
 ---
 
 ### ❌ DON'T
 
-* Allow agent-level optimization to break system goals
-* Ignore system-wide inefficiencies
-* Delay critical decisions
-* Permit drift without correction
+- Allow agent-level optimization to break system goals
+- Ignore system-wide inefficiencies
+- Delay critical decisions
+- Permit drift without correction
 
 ---
 
@@ -267,80 +267,36 @@ governance_pipeline:
 
 ### 1. Governance Framework
 
-* Objective prioritization
-* Execution control
+- Objective prioritization
+- Execution control
 
 ### 2. Coordination Engine
 
-* Cross-agent synchronization
+- Cross-agent synchronization
 
 ### 3. System Health Monitor
 
-* Global metrics tracking
+- Global metrics tracking
 
 ### 4. Strategic Adaptation System
 
-* Continuous improvement
+- Continuous improvement
 
 ---
 
 ## 🔗 Dependencies
 
-### Input From:
+### Input From
 
-* Chief of Staff → Strategic intent
-* Observability Agent → System metrics
-* Cost Optimization Agent → Efficiency insights
+- Chief of Staff → Strategic intent
+- Observability Agent → System metrics
+- Cost Optimization Agent → Efficiency insights
 
-### Output To:
+### Output To
 
-* Orchestrator → Execution directives
-* All Agents → Priority and policy adjustments
-* Constraint Engine → Rule coordination
-
----
-
-## 🧠 System Positioning
-
-The Meta-Controller is the **highest operational authority** below the Chief of Staff:
-
-```
-Chief of Staff (Strategy)
-        ↓
-Meta-Controller (Governance)
-        ↓
-Orchestrator (Execution)
-        ↓
-Agents (Specialized Roles)
-```
-
----
-
-## 🔜 System Completion Insight
-
-At this stage, the system now includes:
-
-* Planning
-* Execution
-* Validation
-* Recovery
-* Optimization
-* Governance
-
-This represents a **complete Harness Engineering multi-agent architecture**.
-
----
-
-## 📚 Sources
-
-* OpenAI — Harness Engineering
-  [https://openai.com/index/harness-engineering/](https://openai.com/index/harness-engineering/)
-
-* Anthropic — Harness Design for Long-Running Apps
-  [https://www.anthropic.com/engineering/harness-design-long-running-apps](https://www.anthropic.com/engineering/harness-design-long-running-apps)
-
-* Martin Fowler — Harness Engineering
-  [https://martinfowler.com/articles/harness-engineering.html](https://martinfowler.com/articles/harness-engineering.html)
+- Orchestrator → Execution directives
+- All Agents → Priority and policy adjustments
+- Constraint Engine → Rule coordination
 
 ---
 

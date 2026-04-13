@@ -230,19 +230,19 @@ context_pipeline:
 
 ### ✅ DO
 
-* Prioritize **relevance over completeness**
-* Keep context **minimal and structured**
-* Align context with **task dependencies**
-* Continuously refine context based on feedback
+- Prioritize **relevance over completeness**
+- Keep context **minimal and structured**
+- Align context with **task dependencies**
+- Continuously refine context based on feedback
 
 ---
 
 ### ❌ DON'T
 
-* Overload agents with excessive information
-* Include irrelevant or outdated data
-* Deliver unstructured context
-* Ignore context size constraints
+- Overload agents with excessive information
+- Include irrelevant or outdated data
+- Deliver unstructured context
+- Ignore context size constraints
 
 ---
 
@@ -250,44 +250,44 @@ context_pipeline:
 
 ### 1. Context Bundles
 
-* Task-specific
-* Optimized for execution
+- Task-specific
+- Optimized for execution
 
 ### 2. Filtering System
 
-* Noise reduction
-* Relevance scoring
+- Noise reduction
+- Relevance scoring
 
 ### 3. Context Structuring Engine
 
-* Standardized formats
-* Schema compliance
+- Standardized formats
+- Schema compliance
 
 ### 4. Adaptation Mechanism
 
-* Dynamic context refinement
-* --
+- Dynamic context refinement
+- --
 
 ## Set the MD files
 
-* Set the MD files: AGENT, HEARTBEAT, SOULD and TOOLS of Context Curator Agent
-* You can verify if is saved here: http://127.0.0.1:3000/HER/agents/context-curator-agent/instructions
+- Set the MD files: AGENT, HEARTBEAT, SOULD and TOOLS of Context Curator Agent
+- You can verify if is saved here: <http://127.0.0.1:3000/HER/agents/context-curator-agent/instructions>
 
 ---
 
 ## 🔗 Dependencies
 
-### Input From:
+### Input From
 
-* Memory Manager → Stored artifacts
-* Planner → Task structure
-* Orchestrator → Execution state
+- Memory Manager → Stored artifacts
+- Planner → Task structure
+- Orchestrator → Execution state
 
-### Output To:
+### Output To
 
-* Generator Agents → Optimized inputs
-* Evaluator Agents → Relevant validation context
-* Orchestrator → Context bundles
+- Generator Agents → Optimized inputs
+- Evaluator Agents → Relevant validation context
+- Orchestrator → Context bundles
 
 ---
 
@@ -297,22 +297,9 @@ context_pipeline:
 
 Responsible for:
 
-* Simulating execution before real runs
-* Detecting potential issues early
-* Validating plans without side effects
-
----
-
-## 📚 Sources
-
-* OpenAI — Harness Engineering
-  [https://openai.com/index/harness-engineering/](https://openai.com/index/harness-engineering/)
-
-* Anthropic — Harness Design for Long-Running Apps
-  [https://www.anthropic.com/engineering/harness-design-long-running-apps](https://www.anthropic.com/engineering/harness-design-long-running-apps)
-
-* Martin Fowler — Harness Engineering
-  [https://martinfowler.com/articles/harness-engineering.html](https://martinfowler.com/articles/harness-engineering.html)
+- Simulating execution before real runs
+- Detecting potential issues early
+- Validating plans without side effects
 
 ---
 
@@ -334,7 +321,4 @@ You MUST NOT:
 - Ignore context constraints
 
 You are responsible for maximizing signal and minimizing noise.
-```
-
-```
 ```

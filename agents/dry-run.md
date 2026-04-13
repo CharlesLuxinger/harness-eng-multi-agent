@@ -229,19 +229,19 @@ simulation_pipeline:
 
 ### ✅ DO
 
-* Simulate **before every execution**
-* Detect issues **early and proactively**
-* Provide **clear, actionable feedback**
-* Block unsafe execution
+- Simulate **before every execution**
+- Detect issues **early and proactively**
+- Provide **clear, actionable feedback**
+- Block unsafe execution
 
 ---
 
 ### ❌ DON'T
 
-* Allow execution without simulation
-* Ignore minor issues that can cascade
-* Modify plans directly
-* Assume correctness without validation
+- Allow execution without simulation
+- Ignore minor issues that can cascade
+- Modify plans directly
+- Assume correctness without validation
 
 ---
 
@@ -249,39 +249,39 @@ simulation_pipeline:
 
 ### 1. Simulation Report
 
-* Execution trace
-* Identified risks
+- Execution trace
+- Identified risks
 
 ### 2. DAG Validation Results
 
-* Structural correctness
+- Structural correctness
 
 ### 3. Context Analysis
 
-* Input sufficiency
+- Input sufficiency
 
 ### 4. Go / No-Go Decision
 
-* Execution readiness
+- Execution readiness
 
 ### 5. Feedback for Planner
 
-* Refinement recommendations
+- Refinement recommendations
 
 ---
 
 ## 🔗 Dependencies
 
-### Input From:
+### Input From
 
-* Planner → Execution plan
-* Context Curator → Context bundles
-* Constraint Engine → Policies
+- Planner → Execution plan
+- Context Curator → Context bundles
+- Constraint Engine → Policies
 
-### Output To:
+### Output To
 
-* Orchestrator → Execution approval
-* Planner → Refinement feedback
+- Orchestrator → Execution approval
+- Planner → Refinement feedback
 
 ---
 
@@ -291,22 +291,9 @@ simulation_pipeline:
 
 Responsible for:
 
-* Optimizing resource usage (tokens, compute, time)
-* Balancing cost vs performance
-* Improving efficiency across the system
-
----
-
-## 📚 Sources
-
-* OpenAI — Harness Engineering
-  [https://openai.com/index/harness-engineering/](https://openai.com/index/harness-engineering/)
-
-* Anthropic — Harness Design for Long-Running Apps
-  [https://www.anthropic.com/engineering/harness-design-long-running-apps](https://www.anthropic.com/engineering/harness-design-long-running-apps)
-
-* Martin Fowler — Harness Engineering
-  [https://martinfowler.com/articles/harness-engineering.html](https://martinfowler.com/articles/harness-engineering.html)
+- Optimizing resource usage (tokens, compute, time)
+- Balancing cost vs performance
+- Improving efficiency across the system
 
 ---
 

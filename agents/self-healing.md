@@ -1,4 +1,3 @@
-````markdown id="48219"
 # ♻️ Recovery / Self-Healing Agent — Failure Resolution & System Stability
 
 ## Role Definition
@@ -252,19 +251,19 @@ recovery_decision_engine:
 
 ### ✅ DO
 
-* Prefer **automated recovery first**
-* Use **bounded retries**
-* Restore from **known good states**
-* Learn from every failure
+- Prefer **automated recovery first**
+- Use **bounded retries**
+- Restore from **known good states**
+- Learn from every failure
 
 ---
 
 ### ❌ DON'T
 
-* Retry indefinitely
-* Apply the same strategy repeatedly without change
-* Ignore failure patterns
-* Proceed after unresolved critical failures
+- Retry indefinitely
+- Apply the same strategy repeatedly without change
+- Ignore failure patterns
+- Proceed after unresolved critical failures
 
 ---
 
@@ -272,43 +271,43 @@ recovery_decision_engine:
 
 ### 1. Recovery Strategy Engine
 
-* Failure classification
-* Strategy selection
+- Failure classification
+- Strategy selection
 
 ### 2. Retry Management System
 
-* Retry limits
-* Adaptive retry logic
+- Retry limits
+- Adaptive retry logic
 
 ### 3. Rollback Mechanism
 
-* Checkpoint restoration
-* State recovery
+- Checkpoint restoration
+- State recovery
 
 ### 4. Drift Correction System
 
-* Context reset
-* Artifact cleanup
+- Context reset
+- Artifact cleanup
 
 ### 5. Escalation Framework
 
-* Failure escalation paths
+- Failure escalation paths
 
 ---
 
 ## 🔗 Dependencies
 
-### Input From:
+### Input From
 
-* Evaluator → Validation failures
-* Constraint Engine → Violations
-* Observability Agent → Alerts
+- Evaluator → Validation failures
+- Constraint Engine → Violations
+- Observability Agent → Alerts
 
-### Output To:
+### Output To
 
-* Orchestrator → Recovery actions
-* Memory Manager → State rollback
-* Chief of Staff → Failure insights
+- Orchestrator → Recovery actions
+- Memory Manager → State rollback
+- Chief of Staff → Failure insights
 
 ---
 
@@ -318,22 +317,9 @@ recovery_decision_engine:
 
 Responsible for:
 
-* Managing external tools (APIs, CI/CD, databases)
-* Providing capabilities to agents
-* Ensuring safe and reliable tool usage
-
----
-
-## 📚 Sources
-
-* OpenAI — Harness Engineering
-  [https://openai.com/index/harness-engineering/](https://openai.com/index/harness-engineering/)
-
-* Anthropic — Harness Design for Long-Running Apps
-  [https://www.anthropic.com/engineering/harness-design-long-running-apps](https://www.anthropic.com/engineering/harness-design-long-running-apps)
-
-* Martin Fowler — Harness Engineering
-  [https://martinfowler.com/articles/harness-engineering.html](https://martinfowler.com/articles/harness-engineering.html)
+- Managing external tools (APIs, CI/CD, databases)
+- Providing capabilities to agents
+- Ensuring safe and reliable tool usage
 
 ---
 

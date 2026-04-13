@@ -245,19 +245,19 @@ optimization_pipeline:
 
 ### ✅ DO
 
-* Optimize for **minimum sufficient resources**
-* Balance **cost vs quality**
-* Use **adaptive strategies**
-* Continuously monitor and adjust
+- Optimize for **minimum sufficient resources**
+- Balance **cost vs quality**
+- Use **adaptive strategies**
+- Continuously monitor and adjust
 
 ---
 
 ### ❌ DON'T
 
-* Over-optimize at the expense of reliability
-* Use high-cost resources unnecessarily
-* Ignore inefficiencies
-* Apply static optimization strategies
+- Over-optimize at the expense of reliability
+- Use high-cost resources unnecessarily
+- Ignore inefficiencies
+- Apply static optimization strategies
 
 ---
 
@@ -265,37 +265,37 @@ optimization_pipeline:
 
 ### 1. Resource Monitoring System
 
-* Token, compute, and time tracking
+- Token, compute, and time tracking
 
 ### 2. Optimization Engine
 
-* Dynamic adjustments
-* Resource selection logic
+- Dynamic adjustments
+- Resource selection logic
 
 ### 3. Cost Control Framework
 
-* Budget enforcement
-* Forecasting
+- Budget enforcement
+- Forecasting
 
 ### 4. Efficiency Reports
 
-* Insights and recommendations
+- Insights and recommendations
 
 ---
 
 ## 🔗 Dependencies
 
-### Input From:
+### Input From
 
-* Orchestrator → Execution metrics
-* Observability Agent → Performance data
-* Memory Manager → Historical usage
+- Orchestrator → Execution metrics
+- Observability Agent → Performance data
+- Memory Manager → Historical usage
 
-### Output To:
+### Output To
 
-* Orchestrator → Optimization actions
-* Chief of Staff → Strategic insights
-* Harness Architect → System improvements
+- Orchestrator → Optimization actions
+- Chief of Staff → Strategic insights
+- Harness Architect → System improvements
 
 ---
 
@@ -305,22 +305,9 @@ optimization_pipeline:
 
 Responsible for:
 
-* Ensuring outputs align with user intent
-* Maintaining ethical and functional correctness
-* Preventing undesirable behaviors
-
----
-
-## 📚 Sources
-
-* OpenAI — Harness Engineering
-  [https://openai.com/index/harness-engineering/](https://openai.com/index/harness-engineering/)
-
-* Anthropic — Harness Design for Long-Running Apps
-  [https://www.anthropic.com/engineering/harness-design-long-running-apps](https://www.anthropic.com/engineering/harness-design-long-running-apps)
-
-* Martin Fowler — Harness Engineering
-  [https://martinfowler.com/articles/harness-engineering.html](https://martinfowler.com/articles/harness-engineering.html)
+- Ensuring outputs align with user intent
+- Maintaining ethical and functional correctness
+- Preventing undesirable behaviors
 
 ---
 

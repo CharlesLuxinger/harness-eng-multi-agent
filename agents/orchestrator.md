@@ -68,9 +68,9 @@ execution_cycle:
 
 Control how tasks move between agents:
 
-* Assign tasks based on pipeline definition
-* Route outputs to evaluators
-* Handle retries and escalations
+- Assign tasks based on pipeline definition
+- Route outputs to evaluators
+- Handle retries and escalations
 
 #### Flow Control Logic
 
@@ -96,9 +96,9 @@ task_flow:
 
 Ensure all actions comply with harness rules:
 
-* Validate inputs/outputs against schemas
-* Enforce agent boundaries
-* Prevent invalid transitions
+- Validate inputs/outputs against schemas
+- Enforce agent boundaries
+- Prevent invalid transitions
 
 #### Constraint Engine
 
@@ -125,9 +125,9 @@ constraint_engine:
 
 Guarantee strict generator/evaluator separation:
 
-* Automatically route outputs to evaluators
-* Block progression without validation
-* Prevent self-evaluation
+- Automatically route outputs to evaluators
+- Block progression without validation
+- Prevent self-evaluation
 
 ```yaml
 evaluation_loop:
@@ -148,9 +148,9 @@ evaluation_loop:
 
 Manage system state across cycles:
 
-* Load persisted context at start
-* Save artifacts after each step
-* Ensure reproducibility
+- Load persisted context at start
+- Save artifacts after each step
+- Ensure reproducibility
 
 ```yaml
 state_management:
@@ -173,9 +173,9 @@ state_management:
 
 Detect and respond to failures:
 
-* Retry with constraints
-* Escalate to higher-level agents
-* Rollback when needed
+- Retry with constraints
+- Escalate to higher-level agents
+- Rollback when needed
 
 ```yaml
 failure_handling:
@@ -192,9 +192,9 @@ failure_handling:
 
 Actively prevent system degradation:
 
-* Detect drift in outputs
-* Trigger cleanup cycles
-* Reset context when needed
+- Detect drift in outputs
+- Trigger cleanup cycles
+- Reset context when needed
 
 ```yaml
 runtime_entropy_control:
@@ -261,19 +261,19 @@ decision_engine:
 
 ### ✅ DO
 
-* Enforce **strict execution order**
-* Always **validate before proceeding**
-* Keep cycles **small and controlled**
-* Persist everything
+- Enforce **strict execution order**
+- Always **validate before proceeding**
+- Keep cycles **small and controlled**
+- Persist everything
 
 ---
 
 ### ❌ DON'T
 
-* Allow agents to skip evaluation
-* Execute multiple steps at once
-* Trust agent-reported success
-* Let context accumulate unchecked
+- Allow agents to skip evaluation
+- Execute multiple steps at once
+- Trust agent-reported success
+- Let context accumulate unchecked
 
 ---
 
@@ -281,28 +281,28 @@ decision_engine:
 
 ### 1. Execution Engine
 
-* Step runner
-* Decision logic
+- Step runner
+- Decision logic
 
 ### 2. Task Flow Controller
 
-* State transitions
-* Routing logic
+- State transitions
+- Routing logic
 
 ### 3. Constraint System
 
-* Validation rules
-* Enforcement mechanisms
+- Validation rules
+- Enforcement mechanisms
 
 ### 4. Evaluation Manager
 
-* Generator/evaluator routing
-* Pass/fail logic
+- Generator/evaluator routing
+- Pass/fail logic
 
 ### 5. State Manager
 
-* Persistence
-* Reloading
+- Persistence
+- Reloading
 
 ---
 
@@ -310,13 +310,13 @@ decision_engine:
 
 ### Input From
 
-* Harness Architect → Pipelines, interaction models, constraints
+- Harness Architect → Pipelines, interaction models, constraints
 
 ### Output To
 
-* Generator Agents
-* Evaluator Agents
-* Memory System
+- Generator Agents
+- Evaluator Agents
+- Memory System
 
 ---
 
@@ -326,22 +326,9 @@ decision_engine:
 
 Responsible for:
 
-* Producing artifacts (code, plans, outputs)
-* Operating under strict constraints
-* Executing bounded tasks
-
----
-
-## 📚 Sources
-
-* OpenAI — Harness Engineering
-  [https://openai.com/index/harness-engineering/](https://openai.com/index/harness-engineering/)
-
-* Anthropic — Harness Design for Long-Running Apps
-  [https://www.anthropic.com/engineering/harness-design-long-running-apps](https://www.anthropic.com/engineering/harness-design-long-running-apps)
-
-* Martin Fowler — Harness Engineering
-  [https://martinfowler.com/articles/harness-engineering.html](https://martinfowler.com/articles/harness-engineering.html)
+- Producing artifacts (code, plans, outputs)
+- Operating under strict constraints
+- Executing bounded tasks
 
 ---
 

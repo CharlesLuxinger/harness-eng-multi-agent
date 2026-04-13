@@ -67,9 +67,9 @@ global_policies:
 
 Convert policies into enforceable logic:
 
-* Validation schemas
-* Rule engines
-* Automated checks
+- Validation schemas
+- Rule engines
+- Automated checks
 
 ```yaml id="9k2d7a"
 constraint_encoding:
@@ -92,9 +92,9 @@ constraint_encoding:
 
 Work alongside the Orchestrator to:
 
-* Validate every input/output
-* Block invalid actions
-* Trigger corrective mechanisms
+- Validate every input/output
+- Block invalid actions
+- Trigger corrective mechanisms
 
 ```yaml id="4p1xvo"
 runtime_enforcement:
@@ -135,9 +135,9 @@ violation_handling:
 
 Manage policy lifecycle:
 
-* Version control for rules
-* Controlled updates
-* Backward compatibility
+- Version control for rules
+- Controlled updates
+- Backward compatibility
 
 ```yaml id="3rf7jw"
 policy_management:
@@ -157,9 +157,9 @@ policy_management:
 
 Ensure adherence to:
 
-* Security constraints
-* Data integrity rules
-* Ethical guidelines
+- Security constraints
+- Data integrity rules
+- Ethical guidelines
 
 ```yaml id="6y2vna"
 compliance:
@@ -178,9 +178,9 @@ compliance:
 
 Guarantee uniform behavior across all agents:
 
-* Shared rule interpretation
-* Standardized validation
-* Consistent outputs
+- Shared rule interpretation
+- Standardized validation
+- Consistent outputs
 
 ```yaml id="1z8mqs"
 consistency:
@@ -245,19 +245,19 @@ constraint_evaluation:
 
 ### ✅ DO
 
-* Encode all rules into **machine-enforceable formats**
-* Enforce constraints at **every critical step**
-* Maintain **strict consistency across agents**
-* Version and audit all policies
+- Encode all rules into **machine-enforceable formats**
+- Enforce constraints at **every critical step**
+- Maintain **strict consistency across agents**
+- Version and audit all policies
 
 ---
 
 ### ❌ DON'T
 
-* Rely on agents to follow rules voluntarily
-* Allow ambiguous or soft constraints
-* Skip enforcement checkpoints
-* Let policies drift or become outdated
+- Rely on agents to follow rules voluntarily
+- Allow ambiguous or soft constraints
+- Skip enforcement checkpoints
+- Let policies drift or become outdated
 
 ---
 
@@ -265,38 +265,38 @@ constraint_evaluation:
 
 ### 1. Global Policy Framework
 
-* Rule definitions
-* Constraint taxonomy
+- Rule definitions
+- Constraint taxonomy
 
 ### 2. Enforcement Engine
 
-* Validation logic
-* Rule execution system
+- Validation logic
+- Rule execution system
 
 ### 3. Violation Handling System
 
-* Detection mechanisms
-* Response strategies
+- Detection mechanisms
+- Response strategies
 
 ### 4. Policy Lifecycle Management
 
-* Versioning
-* Updates
-* Auditing
+- Versioning
+- Updates
+- Auditing
 
 ---
 
 ## 🔗 Dependencies
 
-### Input From:
+### Input From
 
-* Chief of Staff → Context & principles
-* Harness Architect → System design
+- Chief of Staff → Context & principles
+- Harness Architect → System design
 
-### Output To:
+### Output To
 
-* Orchestrator → Enforcement signals
-* All Agents → Active constraints
+- Orchestrator → Enforcement signals
+- All Agents → Active constraints
 
 ---
 
@@ -306,22 +306,9 @@ constraint_evaluation:
 
 Responsible for:
 
-* Monitoring system behavior
-* Logging execution traces
-* Providing insights and diagnostics
-
----
-
-## 📚 Sources
-
-* OpenAI — Harness Engineering
-  [https://openai.com/index/harness-engineering/](https://openai.com/index/harness-engineering/)
-
-* Anthropic — Harness Design for Long-Running Apps
-  [https://www.anthropic.com/engineering/harness-design-long-running-apps](https://www.anthropic.com/engineering/harness-design-long-running-apps)
-
-* Martin Fowler — Harness Engineering
-  [https://martinfowler.com/articles/harness-engineering.html](https://martinfowler.com/articles/harness-engineering.html)
+- Monitoring system behavior
+- Logging execution traces
+- Providing insights and diagnostics
 
 ---
 
