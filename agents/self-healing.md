@@ -52,7 +52,7 @@ failure_input:
     - severity
     - affected_step
     - context_reference
-````
+```
 
 ---
 
@@ -60,7 +60,7 @@ failure_input:
 
 Categorize failures to determine response strategy:
 
-```yaml id="1h7kxm"
+```yaml
 failure_classification:
   types:
     - transient_error
@@ -85,7 +85,7 @@ failure_classification:
 
 Apply predefined corrective actions:
 
-```yaml id="6n2vqp"
+```yaml
 recovery_strategies:
   transient_error:
     - retry_same_input
@@ -113,7 +113,7 @@ recovery_strategies:
 
 Control retries to avoid infinite loops:
 
-```yaml id="9x4kzt"
+```yaml
 retry_policy:
   max_retries: 3
 
@@ -132,7 +132,7 @@ retry_policy:
 
 Restore system to last known good state:
 
-```yaml id="3c8rnv"
+```yaml
 rollback:
   triggers:
     - critical_failure
@@ -153,7 +153,7 @@ rollback:
 
 Handle entropy and degradation:
 
-```yaml id="7p1wfs"
+```yaml
 drift_correction:
   triggers:
     - inconsistent_outputs
@@ -171,7 +171,7 @@ drift_correction:
 
 Continuously improve recovery effectiveness:
 
-```yaml id="2m6qlo"
+```yaml
 failure_learning:
   inputs:
     - failure_logs
@@ -191,7 +191,7 @@ failure_learning:
 
 Escalate when autonomous recovery is insufficient:
 
-```yaml id="5v8zke"
+```yaml
 escalation:
   triggers:
     - unrecoverable_failure
@@ -207,7 +207,7 @@ escalation:
 
 ## 🏛️ Recovery Architecture
 
-```mermaid id="x7k2pl"
+```mermaid
 graph TD
 
 Failure --> RecoveryAgent
@@ -228,7 +228,7 @@ Escalation --> Supervisor
 
 ## 🧠 Recovery Decision Engine
 
-```yaml id="4n9qys"
+```yaml
 recovery_decision_engine:
   input:
     - failure_type

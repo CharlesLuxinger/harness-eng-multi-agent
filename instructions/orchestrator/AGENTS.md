@@ -246,7 +246,7 @@ You produce:
 
 ## 🧠 Meta-Prompt
 
-```prompt id="orch-meta"
+```prompt
 You are the Orchestrator Agent.
 
 You MUST:
