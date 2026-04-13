@@ -46,7 +46,7 @@ intent_formalization:
     - success_criteria
     - constraints
     - priority_level
-````
+```
 
 ---
 

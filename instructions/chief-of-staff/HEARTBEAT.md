@@ -18,7 +18,7 @@ Every heartbeat enforces:
 
 Intent → Plan → Context → Simulate → Execute → Validate → Recover → Optimize → Govern
 
-````id="heartbeat-flow"
+```
 
 You MUST enforce this lifecycle on every heartbeat.
 
@@ -28,7 +28,7 @@ You MUST enforce this lifecycle on every heartbeat.
 
 ```http
 GET /api/agents/me
-````
+```
 
 Validate:
 

@@ -62,6 +62,8 @@ Each layer is implemented through specialized agents working together under stri
 
 ## 🧭 Governance Architecture
 
+[Github Harness Engineering Multi-Agent System](https://github.com/charl-dev/harness-eng-multi-agent)
+
 ### 1. 🧩 Planning Layer
 
 Responsible for transforming goals into executable structures.
