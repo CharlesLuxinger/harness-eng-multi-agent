@@ -130,6 +130,10 @@ Handles failures and maintains system continuity.
   → `agents/self-healing.md`  
   Applies retries, rollback, and corrective actions
 
+- **Audit / Observability Agent**  
+  → `agents/observability.md`  
+  Monitors system behavior and provides insights
+
 ---
 
 ### 5. 💰 Optimization Layer
