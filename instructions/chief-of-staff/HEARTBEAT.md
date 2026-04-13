@@ -6,25 +6,31 @@ This is the **deterministic execution loop** for a Harness Engineering system.
 
 Every heartbeat enforces:
 
-- Structured execution  
-- Controlled agent orchestration  
-- Continuous validation and governance  
+- Structured execution
+- Controlled agent orchestration
+- Continuous validation and governance
 
 ---
 
-## 🔁 Core Execution Lifecycle (MANDATORY)
+## Core Execution Lifecycle (MANDATORY)
 
-```text
-
-Intent → Plan → Context → Simulate → Execute → Validate → Recover → Optimize → Govern
-
+```mermaid
+graph LR
+    A["Intent"] --> B["Plan"]
+    B --> C["Context"]
+    C --> D["Simulate"]
+    D --> E["Execute"]
+    E --> F["Validate"]
+    F --> G["Recover"]
+    G --> H["Optimize"]
+    H --> I["Govern"]
 ```
 
 You MUST enforce this lifecycle on every heartbeat.
 
 ---
 
-## 1. 🧭 Identity & System Context
+## 1. Identity & System Context
 
 ```http
 GET /api/agents/me
@@ -45,22 +51,22 @@ Check wake context:
 
 ---
 
-## 2. 🎯 Intent & Directive Validation
+## 2. Intent & Directive Validation
 
 If triggered by task or input:
 
 ```yaml
 intent_check:
-  - goal_defined
-  - success_criteria_defined
-  - constraints_defined
+ - goal_defined
+ - success_criteria_defined
+ - constraints_defined
 ```
 
 If missing → **BLOCK and formalize intent**
 
 ---
 
-## 3. 🧩 Planning Enforcement (Planner Agent)
+## 3. Planning Enforcement (Planner Agent)
 
 Ensure:
 
@@ -69,31 +75,31 @@ Ensure:
 
 ```yaml
 planning_checks:
-  - atomic_tasks
-  - explicit_dependencies
-  - verifiable_outputs
+ - atomic_tasks
+ - explicit_dependencies
+ - verifiable_outputs
 ```
 
 If not → send to **Planner Agent**
 
 ---
 
-## 4. 🧠 Context Validation (Context Curator)
+## 4. Context Validation (Context Curator)
 
 Ensure:
 
 ```yaml
 context_checks:
-  - relevance
-  - minimality
-  - completeness
+ - relevance
+ - minimality
+ - completeness
 ```
 
 If invalid → request **context re-curation**
 
 ---
 
-## 5. 🧪 Simulation Gate (MANDATORY)
+## 5. Simulation Gate (MANDATORY)
 
 Before execution:
 
@@ -101,59 +107,59 @@ Route to **Simulation Agent**
 
 ```yaml
 simulation_requirements:
-  - DAG_valid
-  - no_dependency_errors
-  - constraints_satisfied
-  - risks_identified
+ - DAG_valid
+ - no_dependency_errors
+ - constraints_satisfied
+ - risks_identified
 ```
 
-### 🚫 If ANY fail
+### If ANY fail
 
 - Block execution
 - Send feedback to Planner
 
 ---
 
-## 6. ⚙️ Execution Control (Orchestrator)
+## 6. Execution Control (Orchestrator)
 
-If simulation = ✅ GO:
+If simulation = GO:
 
 - Trigger execution pipeline
 - Ensure:
 
 ```yaml
 execution_rules:
-  - agent_boundaries_respected
-  - no_direct_execution_by_chief
-  - full_trace_logging
+ - agent_boundaries_respected
+ - no_direct_execution_by_chief
+ - full_trace_logging
 ```
 
 ---
 
-## 7. ✅ Multi-Layer Validation
+## 7. Multi-Layer Validation
 
 ALL outputs must pass:
 
 ```yaml
 validation_layers:
-  - evaluator_passed
-  - alignment_verified
-  - constraints_valid
+ - evaluator_passed
+ - alignment_verified
+ - constraints_valid
 ```
 
 If ANY fail → route to **Recovery Agent**
 
 ---
 
-## 8. ♻️ Recovery Handling
+## 8. Recovery Handling
 
 On failure:
 
 ```yaml
 recovery_flow:
-  - diagnose_issue
-  - retry_or_adjust
-  - revalidate
+ - diagnose_issue
+ - retry_or_adjust
+ - revalidate
 ```
 
 Loop until:
@@ -163,30 +169,30 @@ Loop until:
 
 ---
 
-## 9. 💰 Optimization Check
+## 9. Optimization Check
 
 Continuously evaluate:
 
 ```yaml
 optimization_checks:
-  - token_usage
-  - latency
-  - compute_efficiency
+ - token_usage
+ - latency
+ - compute_efficiency
 ```
 
 If inefficient → trigger **Optimization Agent**
 
 ---
 
-## 10. 🧠 Memory & State Management
+## 10. Memory & State Management
 
 Delegate to **Memory Agent**:
 
 ```yaml
 memory_updates:
-  - persist_execution_state
-  - store_artifacts
-  - update_context_references
+ - persist_execution_state
+ - store_artifacts
+ - update_context_references
 ```
 
 Ensure:
@@ -196,52 +202,52 @@ Ensure:
 
 ---
 
-## 11. 📊 Observability & Logging
+## 11. Observability & Logging
 
 Ensure:
 
 ```yaml
 observability:
-  - execution_traces_logged
-  - metrics_recorded
-  - failures_tracked
+ - execution_traces_logged
+ - metrics_recorded
+ - failures_tracked
 ```
 
 ---
 
-## 12. 🏛️ Governance Check (Meta-Controller)
+## 12. Governance Check (Meta-Controller)
 
 Validate system-wide:
 
 ```yaml
 governance_checks:
-  - objectives_aligned
-  - no_agent_conflicts
-  - system_health_ok
+ - objectives_aligned
+ - no_agent_conflicts
+ - system_health_ok
 ```
 
 If issues → escalate to **Meta-Controller**
 
 ---
 
-## 13. 📋 Action Log (MANDATORY)
+## 13. Action Log (MANDATORY)
 
 Update task with:
 
 ```yaml
 action_log:
-  - intent_status
-  - planning_status
-  - simulation_result
-  - execution_status
-  - validation_status
-  - recovery_actions
-  - optimization_notes
+ - intent_status
+ - planning_status
+ - simulation_result
+ - execution_status
+ - validation_status
+ - recovery_actions
+ - optimization_notes
 ```
 
 ---
 
-## 14. 🚦 Task Flow Control
+## 14. Task Flow Control
 
 ### Prioritization
 
@@ -252,7 +258,7 @@ action_log:
 
 ---
 
-## 15. 🔁 Continuous Loop Behavior
+## 15. Continuous Loop Behavior
 
 If task incomplete:
 
@@ -270,7 +276,7 @@ If complete:
 
 ---
 
-## 🚫 HARD CONSTRAINTS
+## HARD CONSTRAINTS
 
 You MUST NOT:
 
@@ -283,7 +289,7 @@ You MUST NOT:
 
 ---
 
-## 🔐 Safety Enforcement
+## Safety Enforcement
 
 - All execution must respect constraints
 - All code must run in sandbox
@@ -291,7 +297,7 @@ You MUST NOT:
 
 ---
 
-## 📂 Required Files
+## Required Files
 
 - `./AGENTS.md` → System governance rules
 - `./SOUL.md` → Identity and behavior
@@ -299,7 +305,7 @@ You MUST NOT:
 
 ---
 
-## 🧠 Meta-Execution Prompt
+## Meta-Execution Prompt
 
 ```prompt id="heartbeat-meta"
 You are executing a Harness Engineering heartbeat.
@@ -322,7 +328,7 @@ You are the execution control loop of the system.
 
 ---
 
-## 🚀 Final Insight
+## Final Insight
 
 This is NOT a task runner.
 

@@ -1,4 +1,4 @@
-# 🧪 HEARTBEAT.md — Environment / Sandbox Execution Loop
+# HEARTBEAT.md — Environment / Sandbox Execution Loop
 
 ## Purpose
 
@@ -6,53 +6,70 @@ This is the **safe execution control loop**.
 
 You ensure that **every execution happens in an isolated, controlled, and ephemeral environment**, guaranteeing:
 
-- No system contamination  
-- Deterministic execution  
-- Safe result extraction  
+- No system contamination 
+- Deterministic execution 
+- Safe result extraction 
 
 ---
 
-## 🔁 Core Execution Flow (MANDATORY)
+## Core Execution Flow (MANDATORY)
 
-```text
-
-Provision → Initialize → Execute → Monitor → Capture → Teardown
-
+```mermaid
+graph LR
+  A["Provision"]
+  B["Initialize"]
+  C["Execute"]
+  D["Monitor"]
+  E["Capture"]
+  F["Teardown"]
+  
+  A --> B
+  B --> C
+  C --> D
+  D --> E
+  E --> F
+  
+  style A fill:#e3f2fd
+  style B fill:#fff9c4
+  style C fill:#fff9c4
+  style D fill:#fff9c4
+  style E fill:#fff9c4
+  style F fill:#c8e6c9
 ```
 
 ---
 
-## 1. 🧱 Provision Environment
+## 1. Provision Environment
 
 ```yaml
 provisioning:
-  create:
-    - sandbox_id
-    - runtime_type
-    - resource_limits
+ create:
+ - sandbox_id
+ - runtime_type
+ - resource_limits
 ```
 
 ### Validate
 
 ```yaml
 checks:
-  - environment_created
-  - resources_allocated
-  - isolation_ready
+ - environment_created
+ - resources_allocated
+ - isolation_ready
 ```
 
-🚫 If failed → abort + signal failure
+ If failed → abort + signal failure
 
 ---
 
-## 2. ⚙️ Initialize Environment
+## 2. Initialize Environment
 
 ```yaml
 initialization:
-  setup:
-    - runtime_dependencies
-    - environment_variables
-    - execution_context
+ setup:
+ - runtime_dependencies
+ - environment_variables
+ - execution_context
 ```
 
 ### Initialize Guarantees
@@ -62,18 +79,18 @@ initialization:
 
 ---
 
-## 3. ▶️ Execute Artifact
+## 3. Execute Artifact
 
 ```yaml
 execution:
-  input:
-    - code_artifact
-    - runtime_config
+ input:
+ - code_artifact
+ - runtime_config
 
-  controls:
-    - timeout
-    - cpu_limit
-    - memory_limit
+ controls:
+ - timeout
+ - cpu_limit
+ - memory_limit
 ```
 
 ### Rules
@@ -83,18 +100,18 @@ execution:
 
 ---
 
-## 4. 📊 Monitor Runtime
+## 4. Monitor Runtime
 
 ```yaml
 monitoring:
-  track:
-    - cpu_usage
-    - memory_usage
-    - execution_time
+ track:
+ - cpu_usage
+ - memory_usage
+ - execution_time
 
-  triggers:
-    - resource_limit_exceeded
-    - suspicious_behavior
+ triggers:
+ - resource_limit_exceeded
+ - suspicious_behavior
 ```
 
 ### Actions
@@ -104,15 +121,15 @@ monitoring:
 
 ---
 
-## 5. 🧪 Capture Results
+## 5. Capture Results
 
 ```yaml
 capture:
-  outputs:
-    - result
-    - logs
-    - errors
-    - metrics
+ outputs:
+ - result
+ - logs
+ - errors
+ - metrics
 ```
 
 ### Requirements
@@ -122,39 +139,39 @@ capture:
 
 ---
 
-## 6. 🔒 Enforce Isolation
+## 6. Enforce Isolation
 
 ```yaml
 isolation_validation:
-  checks:
-    - no_host_access
-    - no_external_writes
-    - no cross_environment leakage
+ checks:
+ - no_host_access
+ - no_external_writes
+ - no cross_environment leakage
 ```
 
-🚫 If violation → terminate + escalate
+ If violation → terminate + escalate
 
 ---
 
-## 7. 🔁 Reproducibility Validation
+## 7. Reproducibility Validation
 
 ```yaml
 reproducibility:
-  checks:
-    - consistent_runtime
-    - deterministic_config
+ checks:
+ - consistent_runtime
+ - deterministic_config
 ```
 
 ---
 
-## 8. 🧹 Teardown Environment
+## 8. Teardown Environment
 
 ```yaml
 teardown:
-  steps:
-    - destroy_environment
-    - clear_resources
-    - remove_artifacts
+ steps:
+ - destroy_environment
+ - clear_resources
+ - remove_artifacts
 ```
 
 ### Teardown Guarantees
@@ -164,38 +181,38 @@ teardown:
 
 ---
 
-## 9. 📊 Execution Log (MANDATORY)
+## 9. Execution Log (MANDATORY)
 
 ```yaml
 log:
-  - sandbox_id
-  - execution_status
-  - resource_usage
-  - anomalies_detected
-  - result_summary
+ - sandbox_id
+ - execution_status
+ - resource_usage
+ - anomalies_detected
+ - result_summary
 ```
 
 ---
 
-## 10. 🚨 Failure Handling
+## 10. Failure Handling
 
 ```yaml
 failure_handling:
-  triggers:
-    - execution_error
-    - timeout
-    - resource_exceeded
-    - isolation_violation
+ triggers:
+ - execution_error
+ - timeout
+ - resource_exceeded
+ - isolation_violation
 
-  actions:
-    - terminate
-    - cleanup
-    - signal_recovery_agent
+ actions:
+ - terminate
+ - cleanup
+ - signal_recovery_agent
 ```
 
 ---
 
-## 11. 🔁 Loop Control
+## 11. Loop Control
 
 ### Continue if
 
@@ -207,7 +224,7 @@ failure_handling:
 
 ---
 
-## 🚫 HARD CONSTRAINTS
+## HARD CONSTRAINTS
 
 You MUST NOT:
 
@@ -219,7 +236,7 @@ You MUST NOT:
 
 ---
 
-## 📂 Required Files
+## Required Files
 
 - `./AGENTS.md` → Role constraints
 - `./SOUL.md` → Identity
@@ -227,7 +244,7 @@ You MUST NOT:
 
 ---
 
-## 🧠 Meta-Execution Prompt
+## Meta-Execution Prompt
 
 ```prompt
 You are running the Sandbox Agent heartbeat.
@@ -249,7 +266,8 @@ You are the system's execution safety layer.
 
 ---
 
-## 🚀 Final Insight
+## Final Insight
 
 > Safe execution is not optional.
 > It is the foundation of reliable systems.
+

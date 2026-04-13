@@ -1,4 +1,4 @@
-# 🎛️ HEARTBEAT.md — Orchestrator Execution Loop
+# HEARTBEAT.md — Orchestrator Execution Loop
 
 ## Purpose
 
@@ -6,56 +6,77 @@ This is the **runtime control loop** of the system.
 
 You execute **one controlled step per heartbeat**, ensuring:
 
-- Deterministic execution  
-- Constraint enforcement  
-- Continuous validation  
+- Deterministic execution 
+- Constraint enforcement 
+- Continuous validation 
 
 ---
 
-## 🔁 Core Execution Cycle (MANDATORY)
+## Core Execution Cycle (MANDATORY)
 
-```text
-
-Load → Select → Validate → Execute → Evaluate → Persist → Decide
-
+```mermaid
+graph LR
+  A["Load"]
+  B["Select"]
+  C["Validate"]
+  D["Execute"]
+  E["Evaluate"]
+  F["Persist"]
+  G["Decide"]
+  
+  A --> B
+  B --> C
+  C --> D
+  D --> E
+  E --> F
+  F --> G
+  G -.-> A
+  
+  style A fill:#e3f2fd
+  style B fill:#fff9c4
+  style C fill:#fff9c4
+  style D fill:#fff9c4
+  style E fill:#fff9c4
+  style F fill:#fff9c4
+  style G fill:#c8e6c9
 ```
 
 ---
 
-## 1. 🧭 Load State
+## 1. Load State
 
 ```yaml
 load_state:
-  sources:
-    - memory_system
-    - execution_log
-    - pipeline_definition
+ sources:
+ - memory_system
+ - execution_log
+ - pipeline_definition
 ```
 
-### ✅ Validate
+### Validate
 
 ```yaml
 checks:
-  - state_exists
-  - pipeline_loaded
-  - current_step_known
+ - state_exists
+ - pipeline_loaded
+ - current_step_known
 ```
 
-🚫 If invalid → escalate
+ If invalid → escalate
 
 ---
 
-## 2. 🎯 Select Next Step
+## 2. Select Next Step
 
 ```yaml
 step_selection:
-  input:
-    - current_state
-    - pipeline_rules
+ input:
+ - current_state
+ - pipeline_rules
 
-  output:
-    - next_step
-    - assigned_agent
+ output:
+ - next_step
+ - assigned_agent
 ```
 
 ### Rules
@@ -66,26 +87,26 @@ step_selection:
 
 ---
 
-## 3. ⚖️ Validate Step Legality
+## 3. Validate Step Legality
 
 ```yaml
 step_validation:
-  checks:
-    - step_exists_in_pipeline
-    - dependencies_satisfied
-    - agent_valid_for_step
+ checks:
+ - step_exists_in_pipeline
+ - dependencies_satisfied
+ - agent_valid_for_step
 ```
 
-🚫 If invalid → block + escalate
+ If invalid → block + escalate
 
 ---
 
-## 4. ⚙️ Execute Task (Single Step)
+## 4. Execute Task (Single Step)
 
 ```yaml
 execution:
-  agent: assigned_agent
-  scope: single_task
+ agent: assigned_agent
+ scope: single_task
 ```
 
 ### Constraints
@@ -96,37 +117,37 @@ execution:
 
 ---
 
-## 5. 🧪 Mandatory Evaluation
+## 5. Mandatory Evaluation
 
 ```yaml
 evaluation:
-  route_to: evaluator_agent
+ route_to: evaluator_agent
 
-  requirements:
-    - external_criteria
-    - structured_feedback
+ requirements:
+ - external_criteria
+ - structured_feedback
 ```
 
 ### Outcomes
 
 ```yaml
 evaluation_result:
-  pass → continue
-  fail → retry | escalate
+ pass → continue
+ fail → retry | escalate
 ```
 
-🚫 No evaluation = NO PROGRESS
+ No evaluation = NO PROGRESS
 
 ---
 
-## 6. 💾 Persist State
+## 6. Persist State
 
 ```yaml
 persistence:
-  operations:
-    - store_artifact
-    - update_execution_log
-    - checkpoint_state
+ operations:
+ - store_artifact
+ - update_execution_log
+ - checkpoint_state
 ```
 
 ### Guarantees
@@ -136,17 +157,17 @@ persistence:
 
 ---
 
-## 7. 🧠 Decision Step
+## 7. Decision Step
 
 ```yaml
 decision:
-  inputs:
-    - evaluation_result
-    - current_state
-    - pipeline_rules
+ inputs:
+ - evaluation_result
+ - current_state
+ - pipeline_rules
 
-  outputs:
-    - next_action
+ outputs:
+ - next_action
 ```
 
 ### Possible Actions
@@ -158,55 +179,55 @@ decision:
 
 ---
 
-## 8. 🚨 Failure Handling
+## 8. Failure Handling
 
 ```yaml
 failure_handling:
-  triggers:
-    - evaluation_fail
-    - constraint_violation
-    - invalid_state
+ triggers:
+ - evaluation_fail
+ - constraint_violation
+ - invalid_state
 
-  actions:
-    - retry_with_constraints
-    - rollback
-    - switch_agent
-    - escalate
+ actions:
+ - retry_with_constraints
+ - rollback
+ - switch_agent
+ - escalate
 ```
 
 ---
 
-## 9. 🧹 Runtime Entropy Control
+## 9. Runtime Entropy Control
 
 ```yaml
 entropy_control:
-  triggers:
-    - repeated_failures
-    - inconsistent_outputs
-    - context_growth
+ triggers:
+ - repeated_failures
+ - inconsistent_outputs
+ - context_growth
 
-  actions:
-    - reset_context
-    - prune_state
-    - restart_subtask
+ actions:
+ - reset_context
+ - prune_state
+ - restart_subtask
 ```
 
 ---
 
-## 10. 📊 Execution Log (MANDATORY)
+## 10. Execution Log (MANDATORY)
 
 ```yaml
 execution_log:
-  - step_id
-  - assigned_agent
-  - execution_status
-  - evaluation_result
-  - next_action
+ - step_id
+ - assigned_agent
+ - execution_status
+ - evaluation_result
+ - next_action
 ```
 
 ---
 
-## 11. 🚦 Loop Control
+## 11. Loop Control
 
 ### Continue if
 
@@ -220,7 +241,7 @@ execution_log:
 
 ---
 
-## 🚫 HARD CONSTRAINTS
+## HARD CONSTRAINTS
 
 You MUST NOT:
 
@@ -232,7 +253,7 @@ You MUST NOT:
 
 ---
 
-## 📂 Required Files
+## Required Files
 
 - `./AGENTS.md` → Execution constraints
 - `./SOUL.md` → Identity
@@ -240,7 +261,7 @@ You MUST NOT:
 
 ---
 
-## 🧠 Meta-Execution Prompt
+## Meta-Execution Prompt
 
 ```prompt id="orch-heartbeat-meta"
 You are running the Orchestrator heartbeat.
@@ -263,7 +284,8 @@ You are the runtime control loop of the system.
 
 ---
 
-## 🚀 Final Insight
+## Final Insight
 
 > Execution is not about progress.
 > Execution is about **controlled, validated progress**.
+

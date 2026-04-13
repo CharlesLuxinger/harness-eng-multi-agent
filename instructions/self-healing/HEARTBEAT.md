@@ -1,4 +1,4 @@
-# ♻️ HEARTBEAT.md — Recovery / Self-Healing Execution Loop
+# HEARTBEAT.md — Recovery / Self-Healing Execution Loop
 
 ## Purpose
 
@@ -6,53 +6,73 @@ This is the **failure-response control loop**.
 
 You activate ONLY when failure signals are present and ensure:
 
-- Controlled recovery  
-- Bounded retries  
-- Safe continuation or escalation  
+- Controlled recovery 
+- Bounded retries 
+- Safe continuation or escalation 
 
 ---
 
-## 🔁 Core Recovery Lifecycle (MANDATORY)
+## Core Recovery Lifecycle (MANDATORY)
 
-```text
-
-Detect → Classify → Select Strategy → Apply → Evaluate → Retry | Escalate
-
+```mermaid
+graph LR
+  A["Detect"]
+  B["Classify"]
+  C["Select Strategy"]
+  D["Apply"]
+  E["Evaluate"]
+  F["Retry"]
+  G["Escalate"]
+  
+  A --> B
+  B --> C
+  C --> D
+  D --> E
+  E --> F
+  E --> G
+  
+  style A fill:#e3f2fd
+  style B fill:#fff9c4
+  style C fill:#fff9c4
+  style D fill:#fff9c4
+  style E fill:#fff9c4
+  style F fill:#c8e6c9
+  style G fill:#ffccbc
 ```
 
 ---
 
-## 1. 🚨 Detect Failure
+## 1. Detect Failure
 
 ```yaml
 failure_detection:
-  sources:
-    - evaluator_failures
-    - constraint_violations
-    - observability_alerts
+ sources:
+ - evaluator_failures
+ - constraint_violations
+ - observability_alerts
 ```
 
 ### Validate Input
 
 ```yaml
 checks:
-  - failure_type_present
-  - severity_defined
-  - context_available
+ - failure_type_present
+ - severity_defined
+ - context_available
 ```
 
-🚫 If incomplete → request missing context
+ If incomplete → request missing context
 
 ---
 
-## 2. 🧠 Classify Failure
+## 2. Classify Failure
 
 ```yaml
 classification:
-  determine:
-    - failure_type
-    - severity
-    - affected_component
+ determine:
+ - failure_type
+ - severity
+ - affected_component
 ```
 
 ### Categories
@@ -65,17 +85,17 @@ classification:
 
 ---
 
-## 3. ⚖️ Select Recovery Strategy
+## 3. Select Recovery Strategy
 
 ```yaml
 strategy_selection:
-  input:
-    - failure_type
-    - severity
-    - retry_count
+ input:
+ - failure_type
+ - severity
+ - retry_count
 
-  output:
-    - selected_strategy
+ output:
+ - selected_strategy
 ```
 
 ### Recovery Strategy Rules
@@ -86,16 +106,16 @@ strategy_selection:
 
 ---
 
-## 4. 🔧 Apply Recovery Action
+## 4. Apply Recovery Action
 
 ```yaml
 execution:
-  actions:
-    - retry
-    - modify_constraints
-    - reload_context
-    - rollback
-    - switch_agent
+ actions:
+ - retry
+ - modify_constraints
+ - reload_context
+ - rollback
+ - switch_agent
 ```
 
 ### Constraint
@@ -104,13 +124,13 @@ execution:
 
 ---
 
-## 5. 🧪 Evaluate Recovery Outcome
+## 5. Evaluate Recovery Outcome
 
 ```yaml
 evaluation:
-  result:
-    - success
-    - failure
+ result:
+ - success
+ - failure
 ```
 
 ### If success
@@ -123,15 +143,15 @@ evaluation:
 
 ---
 
-## 6. 🔁 Retry Management
+## 6. Retry Management
 
 ```yaml
 retry_logic:
-  max_retries: 3
+ max_retries: 3
 
-  tracking:
-    - retry_count
-    - strategy_history
+ tracking:
+ - retry_count
+ - strategy_history
 ```
 
 ### Retry Management Rules
@@ -141,68 +161,68 @@ retry_logic:
 
 ---
 
-## 7. 🔄 Rollback Handling (if required)
+## 7. Rollback Handling (if required)
 
 ```yaml
 rollback:
-  triggers:
-    - critical_failure
-    - corrupted_state
+ triggers:
+ - critical_failure
+ - corrupted_state
 
-  process:
-    - locate_checkpoint
-    - restore_state
-    - resume_execution
+ process:
+ - locate_checkpoint
+ - restore_state
+ - resume_execution
 ```
 
 ---
 
-## 8. 🧹 Drift Correction
+## 8. Drift Correction
 
 ```yaml
 drift_control:
-  triggers:
-    - repeated_failures
-    - inconsistent_outputs
+ triggers:
+ - repeated_failures
+ - inconsistent_outputs
 
-  actions:
-    - reset_context
-    - prune_artifacts
-    - reload_memory
+ actions:
+ - reset_context
+ - prune_artifacts
+ - reload_memory
 ```
 
 ---
 
-## 9. 🚦 Escalation Decision
+## 9. Escalation Decision
 
 ```yaml
 escalation:
-  triggers:
-    - retries_exceeded
-    - critical_failure
+ triggers:
+ - retries_exceeded
+ - critical_failure
 
-  targets:
-    - orchestrator
-    - supervisor
+ targets:
+ - orchestrator
+ - supervisor
 ```
 
 ---
 
-## 10. 📊 Recovery Log (MANDATORY)
+## 10. Recovery Log (MANDATORY)
 
 ```yaml
 log:
-  - failure_type
-  - severity
-  - strategy_applied
-  - retry_count
-  - outcome
-  - next_action
+ - failure_type
+ - severity
+ - strategy_applied
+ - retry_count
+ - outcome
+ - next_action
 ```
 
 ---
 
-## 11. 🔁 Loop Control
+## 11. Loop Control
 
 ### Continue if
 
@@ -216,7 +236,7 @@ log:
 
 ---
 
-## 🚫 HARD CONSTRAINTS
+## HARD CONSTRAINTS
 
 You MUST NOT:
 
@@ -228,7 +248,7 @@ You MUST NOT:
 
 ---
 
-## 📂 Required Files
+## Required Files
 
 - `./AGENTS.md` → Role definition
 - `./SOUL.md` → Behavioral constraints
@@ -236,7 +256,7 @@ You MUST NOT:
 
 ---
 
-## 🧠 Meta-Execution Prompt
+## Meta-Execution Prompt
 
 ```prompt
 You are running the Recovery / Self-Healing heartbeat.
@@ -258,7 +278,8 @@ You are the system’s resilience loop.
 
 ---
 
-## 🚀 Final Insight
+## Final Insight
 
 > Recovery is not about fixing errors.
 > It is about restoring controlled execution.
+
