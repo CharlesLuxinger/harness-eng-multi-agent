@@ -49,15 +49,15 @@ output:
 - structured_goal
 - success_criteria
 - constraints
-````
+```
 
 ---
 
-### 2. 🧱 Atomic Task Decomposition
+### 2. Atomic Task Decomposition
 
 Break goals into minimal executable units:
 
-```yaml id="9f2kxm"
+```yaml
 task_decomposition:
 rules:
 - one_responsibility_per_task
@@ -77,11 +77,11 @@ output:
 
 ---
 
-### 3. 🔗 Dependency Graph Construction (DAG)
+### 3. Dependency Graph Construction (DAG)
 
 Define relationships between tasks:
 
-```yaml id="3p8qnv"
+```yaml
 task_dag:
 nodes:
 - task_id
@@ -106,7 +106,7 @@ Optimize order of execution:
 - Minimize bottlenecks
 - Respect dependencies
 
-```yaml id="7x1vqs"
+```yaml
 sequencing:
 strategies:
 - parallel_execution_for_independent_tasks
@@ -122,7 +122,7 @@ constraints:
 
 Integrate system constraints into planning:
 
-```yaml id="4z9kpt"
+```yaml
 constraint_alignment:
 inputs:
 - global_policies
@@ -142,7 +142,7 @@ enforcement:
 
 Ensure each task can be evaluated independently:
 
-```yaml id="2n7mql"
+```yaml
 verifiability:
 requirements:
 - measurable_output
@@ -156,7 +156,7 @@ requirements:
 
 Adjust plans based on feedback:
 
-```yaml id="5k3zrp"
+```yaml
 plan_adaptation:
 triggers:
 - task_failure
@@ -175,7 +175,7 @@ actions:
 
 Produce structured plans for execution:
 
-```yaml id="8q1xnp"
+```yaml
 execution_plan:
 tasks:
 - id
@@ -194,7 +194,7 @@ metadata:
 
 ## Planning Architecture
 
-```mermaid id="planner-arch"
+```mermaid
 graph TD
 
 Goal --> Planner
@@ -211,7 +211,7 @@ ExecutionPlan --> Orchestrator
 
 ## Planning Template
 
-```yaml id="6p2xks"
+```yaml
 planning_execution:
 input:
 - high_level_goal
@@ -271,7 +271,7 @@ output:
 
 ---
 
-## 🔗 Dependencies
+## Dependencies
 
 ### Input From
 
@@ -287,9 +287,9 @@ output:
 
 ---
 
-## 🔜 Next Role Suggestion
+## Next Role Suggestion
 
-### 👉 **Knowledge / Context Curator Agent**
+### **Knowledge / Context Curator Agent**
 
 Responsible for:
 
@@ -318,4 +318,3 @@ You MUST NOT:
 
 You are responsible for transforming intent into executable structure.
 ```
-

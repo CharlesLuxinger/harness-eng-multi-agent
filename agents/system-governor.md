@@ -46,15 +46,15 @@ inputs:
 outputs:
 - prioritized_objectives
 - execution_directives
-````
+```
 
 ---
 
-### 2. ⚖️ Priority & Resource Arbitration
+### 2. Priority & Resource Arbitration
 
 Resolve conflicts across agents:
 
-```yaml id="3p9kxm"
+```yaml
 priority_management:
 factors:
 - task_urgency
@@ -76,7 +76,7 @@ actions:
 
 Ensure agents work as a unified system:
 
-```yaml id="7x2vqp"
+```yaml
 coordination:
 responsibilities:
 - resolve_agent_conflicts
@@ -93,7 +93,7 @@ goal:
 
 Monitor overall system state:
 
-```yaml id="6m8zrs"
+```yaml
 system_health:
 metrics:
 - success_rate
@@ -112,7 +112,7 @@ actions:
 
 Integrate insights across agents:
 
-```yaml id="9q1xkt"
+```yaml
 feedback_orchestration:
 inputs:
 - observability_insights
@@ -126,11 +126,11 @@ outputs:
 
 ---
 
-### 6. 🚦 Execution Governance
+### 6. Execution Governance
 
 Control system-wide execution behavior:
 
-```yaml id="2n4qxp"
+```yaml
 execution_governance:
 controls:
 - start_stop_execution
@@ -149,7 +149,7 @@ modes:
 
 Prevent system misalignment over time:
 
-```yaml id="5k7zrp"
+```yaml
 drift_management:
 detection:
 - goal_deviation
@@ -171,7 +171,7 @@ actions:
 
 Work with Constraint Engine:
 
-```yaml id="8x2vnp"
+```yaml
 constraint_coordination:
 responsibilities:
 - ensure_global_rule_application
@@ -187,7 +187,7 @@ collaboration:
 
 Continuously evolve system strategy:
 
-```yaml id="4z9kqs"
+```yaml
 strategic_adaptation:
 triggers:
 - performance_trends
@@ -203,7 +203,7 @@ actions:
 
 ## Governance Architecture
 
-```mermaid id="governor-arch"
+```mermaid
 graph TD
 
 ChiefOfStaff --> MetaController
@@ -223,7 +223,7 @@ Observability --> MetaController
 
 ## Governance Pipeline
 
-```yaml id="1p4xkn"
+```yaml
 governance_pipeline:
 input:
 - system_metrics
@@ -284,7 +284,7 @@ output:
 
 ---
 
-## 🔗 Dependencies
+## Dependencies
 
 ### Input From
 
@@ -302,7 +302,7 @@ output:
 
 ## Meta-Prompt for Meta-Controller
 
-```prompt id="governor-meta"
+```prompt
 You are the Meta-Controller / System Governor Agent.
 
 You MUST:
@@ -319,4 +319,3 @@ You MUST NOT:
 
 You are responsible for system-wide coherence and control.
 ```
-

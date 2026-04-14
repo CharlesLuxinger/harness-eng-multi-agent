@@ -1,4 +1,4 @@
-# 💰 Cost / Resource Optimization Agent — Efficiency & Performance Control
+# Cost / Resource Optimization Agent — Efficiency & Performance Control
 
 ## Role Definition
 
@@ -53,15 +53,15 @@ time:
 cost:
 - per_task_cost
 - total_pipeline_cost
-````
+```
 
 ---
 
-### 2. ⚖️ Cost vs Performance Balancing
+### 2. Cost vs Performance Balancing
 
 Optimize trade-offs dynamically:
 
-```yaml id="8p2kxm"
+```yaml
 optimization_strategy:
 modes:
 - cost_minimization
@@ -83,7 +83,7 @@ decision_factors:
 
 Select appropriate resources per task:
 
-```yaml id="3x7vqp"
+```yaml
 resource_selection:
 strategies:
 - lightweight_models_for_simple_tasks
@@ -100,7 +100,7 @@ rules:
 
 Adjust execution in real-time:
 
-```yaml id="6m1zrs"
+```yaml
 adaptive_optimization:
 triggers:
 - high_cost_detected
@@ -119,7 +119,7 @@ actions:
 
 Reduce unnecessary token usage:
 
-```yaml id="9q2xkt"
+```yaml
 context_optimization:
 methods:
 - truncate_irrelevant_data
@@ -139,7 +139,7 @@ goal:
 
 Improve execution efficiency:
 
-```yaml id="2n8qxm"
+```yaml
 parallelism:
 strategies:
 - parallel_task_execution
@@ -156,7 +156,7 @@ constraints:
 
 Eliminate unnecessary operations:
 
-```yaml id="5k3zqp"
+```yaml
 redundancy_control:
 detection:
 - duplicate_tasks
@@ -169,11 +169,11 @@ actions:
 
 ---
 
-### 8. 📉 Cost Forecasting & Budget Control
+### 8. Cost Forecasting & Budget Control
 
 Predict and control spending:
 
-```yaml id="8x1vnp"
+```yaml
 cost_control:
 forecasting:
 - estimated_task_cost
@@ -190,7 +190,7 @@ enforcement:
 
 Provide insights for system improvement:
 
-```yaml id="4z7kqs"
+```yaml
 efficiency_analysis:
 outputs:
 - cost_breakdown
@@ -206,7 +206,7 @@ consumers:
 
 ## Optimization Architecture
 
-```mermaid id="cost-arch"
+```mermaid
 graph TD
 
 Orchestrator --> OptimizationAgent
@@ -223,7 +223,7 @@ Adjustments --> Orchestrator
 
 ## Optimization Pipeline
 
-```yaml id="1p9xkn"
+```yaml
 optimization_pipeline:
 input:
 - execution_metrics
@@ -283,7 +283,7 @@ output:
 
 ---
 
-## 🔗 Dependencies
+## Dependencies
 
 ### Input From
 
@@ -299,9 +299,9 @@ output:
 
 ---
 
-## 🔜 Next Role Suggestion
+## Next Role Suggestion
 
-### 👉 **Alignment / Guardrail Agent**
+### **Alignment / Guardrail Agent**
 
 Responsible for:
 
@@ -313,7 +313,7 @@ Responsible for:
 
 ## Meta-Prompt for Cost / Resource Optimization Agent
 
-```prompt id="cost-meta"
+```prompt
 You are the Cost / Resource Optimization Agent.
 
 You MUST:
@@ -330,4 +330,3 @@ You MUST NOT:
 
 You are responsible for system efficiency and sustainability.
 ```
-

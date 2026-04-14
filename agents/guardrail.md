@@ -50,7 +50,7 @@ checks:
 
 output:
 - aligned | misaligned
-````
+```
 
 ---
 
@@ -58,7 +58,7 @@ output:
 
 Validate meaning and coherence:
 
-```yaml id="4p2kxm"
+```yaml
 semantic_validation:
 checks:
 - logical_consistency
@@ -75,11 +75,11 @@ failures:
 
 ---
 
-### 3. ⚖️ Ethical & Safety Guardrails
+### 3. Ethical & Safety Guardrails
 
 Prevent harmful or undesirable outputs:
 
-```yaml id="7x1vqp"
+```yaml
 safety_guardrails:
 domains:
 - harmful_content
@@ -98,7 +98,7 @@ actions:
 
 Ensure outputs meet task requirements:
 
-```yaml id="6m3zrs"
+```yaml
 functional_validation:
 checks:
 - requirement_fulfillment
@@ -115,7 +115,7 @@ outcome:
 
 Identify problematic patterns:
 
-```yaml id="9q8xkt"
+```yaml
 behavior_detection:
 patterns:
 - overgeneralization
@@ -134,7 +134,7 @@ response:
 
 Guide fixes without directly generating outputs:
 
-```yaml id="2n7qxp"
+```yaml
 correction:
 input:
 - detected_issues
@@ -150,7 +150,7 @@ output:
 
 Quantify alignment quality:
 
-```yaml id="5k1zrp"
+```yaml
 alignment_score:
 metrics:
 - intent_match_score
@@ -163,11 +163,11 @@ output:
 
 ---
 
-### 8. 🔗 Cross-Agent Alignment Enforcement
+### 8. Cross-Agent Alignment Enforcement
 
 Ensure all agents remain aligned:
 
-```yaml id="8x4vnp"
+```yaml
 cross_agent_alignment:
 enforcement:
 - shared_intent_reference
@@ -181,7 +181,7 @@ goal:
 
 ## Alignment Architecture
 
-```mermaid id="alignment-arch"
+```mermaid
 graph TD
 
 UserIntent --> AlignmentAgent
@@ -199,7 +199,7 @@ Correction --> Generator
 
 ## Alignment Validation Pipeline
 
-```yaml id="1p7xkn"
+```yaml
 alignment_pipeline:
 input:
 - intent
@@ -261,7 +261,7 @@ output:
 
 ---
 
-## 🔗 Dependencies
+## Dependencies
 
 ### Input From
 
@@ -277,9 +277,9 @@ output:
 
 ---
 
-## 🔜 Next Role Suggestion
+## Next Role Suggestion
 
-### 👉 **Meta-Controller / System Governor Agent**
+### **Meta-Controller / System Governor Agent**
 
 Responsible for:
 
@@ -291,7 +291,7 @@ Responsible for:
 
 ## Meta-Prompt for Alignment / Guardrail Agent
 
-```prompt id="alignment-meta"
+```prompt
 You are the Alignment / Guardrail Agent.
 
 You MUST:
@@ -308,4 +308,3 @@ You MUST NOT:
 
 You are responsible for intent fidelity and system safety.
 ```
-

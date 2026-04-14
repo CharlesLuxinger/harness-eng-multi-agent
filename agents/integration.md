@@ -1,4 +1,4 @@
-# 🔌 Tooling / Integration Agent — External Capabilities & Safe Tool Execution
+# Tooling / Integration Agent — External Capabilities & Safe Tool Execution
 
 ## Role Definition
 
@@ -64,7 +64,7 @@ guarantees:
 
 ---
 
-### 2. 🧰 Capability Provisioning
+### 2. Capability Provisioning
 
 Expose controlled capabilities to agents:
 
@@ -303,9 +303,9 @@ output:
 
 ---
 
-## 🔜 Next Role Suggestion
+## Next Role Suggestion
 
-### 👉 **Environment / Sandbox Agent**
+### **Environment / Sandbox Agent**
 
 Responsible for:
 
@@ -334,4 +334,3 @@ You MUST NOT:
 
 You are the bridge between agents and the external world.
 ```
-

@@ -55,15 +55,15 @@ lifecycle:
 - create
 - execute
 - destroy
-````
+```
 
 ---
 
-### 2. 🔒 Execution Isolation
+### 2. Execution Isolation
 
 Ensure complete separation from host system:
 
-```yaml id="3p8vxm"
+```yaml
 isolation:
 boundaries:
 - filesystem_isolation
@@ -84,7 +84,7 @@ guarantees:
 
 Run generated code securely:
 
-```yaml id="7k2qnp"
+```yaml
 execution:
 input:
 - code_artifact
@@ -107,7 +107,7 @@ output:
 
 Prevent unintended system changes:
 
-```yaml id="5x9rzt"
+```yaml
 side_effect_control:
 restrictions:
 - no_external_writes
@@ -125,7 +125,7 @@ monitoring:
 
 Handle full lifecycle of sandboxes:
 
-```yaml id="2n4kqs"
+```yaml
 lifecycle_management:
 stages:
 - provision
@@ -145,7 +145,7 @@ guarantees:
 
 Ensure consistent execution across runs:
 
-```yaml id="8m1vpl"
+```yaml
 reproducibility:
 controls:
 - fixed_runtime_versions
@@ -165,7 +165,7 @@ goal:
 
 Track execution behavior in real-time:
 
-```yaml id="4z7qxt"
+```yaml
 runtime_monitoring:
 metrics:
 - cpu_usage
@@ -187,7 +187,7 @@ actions:
 
 Protect system integrity:
 
-```yaml id="9p3kwn"
+```yaml
 security:
 measures:
 - sandboxing
@@ -202,7 +202,7 @@ policies:
 
 ## Sandbox Architecture
 
-```mermaid id="v3k9qp"
+```mermaid
 graph TD
 
 Generator --> CodeArtifact
@@ -221,7 +221,7 @@ SandboxEnvironment --> Teardown
 
 ## Execution Template
 
-```yaml id="6q2xkp"
+```yaml
 sandbox_execution:
 input:
 - artifact
@@ -289,7 +289,7 @@ output:
 
 ---
 
-## 🔗 Dependencies
+## Dependencies
 
 ### Input From
 
@@ -304,9 +304,9 @@ output:
 
 ---
 
-## 🔜 Next Role Suggestion
+## Next Role Suggestion
 
-### 👉 **Planner / Task Decomposition Agent**
+### **Planner / Task Decomposition Agent**
 
 Responsible for:
 
@@ -318,7 +318,7 @@ Responsible for:
 
 ## Meta-Prompt for Environment / Sandbox Agent
 
-```prompt id="x7m2qn"
+```prompt
 You are the Environment / Sandbox Agent.
 
 You MUST:
@@ -335,4 +335,3 @@ You MUST NOT:
 
 You are responsible for safe execution and system protection.
 ```
-

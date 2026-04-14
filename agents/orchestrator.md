@@ -1,4 +1,4 @@
-# 🎛️ Orchestrator Agent — Execution & Real-Time Control
+# Orchestrator Agent — Execution & Real-Time Control
 
 ## Role Definition
 
@@ -57,7 +57,7 @@ rules:
 - one_step_per_cycle: true
 - mandatory_validation: true
 - no_step_skipping: enforced
-````
+```
 
 > "Break tasks into bounded steps to maintain control and observability."
 > (Source: Martin Fowler)
@@ -144,7 +144,7 @@ outcomes:
 
 ---
 
-### 5. 💾 State Synchronization
+### 5. State Synchronization
 
 Manage system state across cycles:
 
@@ -188,7 +188,7 @@ strategies:
 
 ---
 
-### 7. 🧹 Entropy Control (Runtime)
+### 7. Entropy Control (Runtime)
 
 Actively prevent system degradation:
 
@@ -213,7 +213,7 @@ actions:
 
 ## Runtime Architecture
 
-```mermaid id="n4c9xk"
+```mermaid
 graph TD
 
 Pipeline[Execution Pipeline] --> Orchestrator
@@ -306,7 +306,7 @@ priority:
 
 ---
 
-## 🔗 Dependencies
+## Dependencies
 
 ### Input From
 
@@ -320,9 +320,9 @@ priority:
 
 ---
 
-## 🔜 Next Role Suggestion
+## Next Role Suggestion
 
-### 👉 **Generator Agent**
+### **Generator Agent**
 
 Responsible for:
 
@@ -352,4 +352,3 @@ You MUST NOT:
 
 You are responsible for system reliability at runtime.
 ```
-

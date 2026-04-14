@@ -32,7 +32,7 @@ Observability transforms the system from a **black box → transparent system**.
 
 ---
 
-### 1. 📜 Execution Trace Logging
+### 1. Execution Trace Logging
 
 Capture every step of execution:
 
@@ -53,7 +53,7 @@ input_reference
 output_reference
 decision
 status
-````
+```
 
 ---
 
@@ -61,12 +61,12 @@ status
 
 Track real-time system performance:
 
-* Task completion rates
-* Error frequencies
-* Retry patterns
-* Latency between steps
+- Task completion rates
+- Error frequencies
+- Retry patterns
+- Latency between steps
 
-```yaml id="8u2k1x"
+```yaml
 monitoring_metrics:
 performance:
 - task_completion_rate
@@ -87,12 +87,12 @@ stability:
 
 Analyze logs to detect:
 
-* Failure root causes
-* Bottlenecks
-* Agent inefficiencies
-* System drift
+- Failure root causes
+- Bottlenecks
+- Agent inefficiencies
+- System drift
 
-```yaml id="k5t9zv"
+```yaml
 diagnostics:
 capabilities:
 - root_cause_analysis
@@ -110,7 +110,7 @@ outputs:
 
 Identify critical issues in real-time:
 
-```yaml id="p1x7lm"
+```yaml
 alerting:
 triggers:
 - repeated_failures
@@ -130,11 +130,11 @@ actions:
 
 Provide structured insights for system improvement:
 
-* Performance trends
-* Failure patterns
-* Optimization opportunities
+- Performance trends
+- Failure patterns
+- Optimization opportunities
 
-```yaml id="2m9qrs"
+```yaml
 insights:
 types:
 - trend_analysis
@@ -155,11 +155,11 @@ consumers:
 
 Feed insights back into system evolution:
 
-* Inform constraint updates
-* Suggest pipeline improvements
-* Highlight architectural weaknesses
+- Inform constraint updates
+- Suggest pipeline improvements
+- Highlight architectural weaknesses
 
-```yaml id="7y4nkp"
+```yaml
 feedback_loop:
 targets:
 - constraint_engine
@@ -172,15 +172,15 @@ goal:
 
 ---
 
-### 7. 🧾 Audit & Compliance Logging
+### 7. Audit & Compliance Logging
 
 Maintain full auditability:
 
-* Immutable logs
-* Decision traceability
-* Policy enforcement tracking
+- Immutable logs
+- Decision traceability
+- Policy enforcement tracking
 
-```yaml id="z8w3af"
+```yaml
 audit:
 requirements:
 - immutability
@@ -196,7 +196,7 @@ usage:
 
 ## Observability Architecture
 
-```mermaid id="c8r5yn"
+```mermaid
 graph TD
 
 Agents --> Logs
@@ -217,7 +217,7 @@ Insights --> HarnessArchitect
 
 ## Observability Pipeline
 
-```yaml id="4x2mqd"
+```yaml
 observability_pipeline:
 input:
 - execution_events
@@ -241,19 +241,19 @@ output:
 
 ### DO
 
-* Log **everything relevant**
-* Use **structured, queryable formats**
-* Detect issues **early and automatically**
-* Provide **actionable insights**
+- Log **everything relevant**
+- Use **structured, queryable formats**
+- Detect issues **early and automatically**
+- Provide **actionable insights**
 
 ---
 
 ### DON'T
 
-* Allow missing or incomplete logs
-* Store unstructured, unusable data
-* Ignore subtle drift signals
-* Delay diagnostics
+- Allow missing or incomplete logs
+- Store unstructured, unusable data
+- Ignore subtle drift signals
+- Delay diagnostics
 
 ---
 
@@ -261,73 +261,60 @@ output:
 
 ### 1. Execution Trace System
 
-* Full step-by-step logs
-* Traceability across agents
+- Full step-by-step logs
+- Traceability across agents
 
 ### 2. Monitoring Dashboard (logical)
 
-* Performance metrics
-* System health indicators
+- Performance metrics
+- System health indicators
 
 ### 3. Diagnostic Engine
 
-* Root cause analysis
-* Anomaly detection
+- Root cause analysis
+- Anomaly detection
 
 ### 4. Insight Reports
 
-* Trends and recommendations
+- Trends and recommendations
 
 ### 5. Alerting System
 
-* Real-time issue detection
+- Real-time issue detection
 
 ---
 
-## 🔗 Dependencies
+## Dependencies
 
-### Input From:
+### Input From
 
-* Orchestrator → Execution events
-* All Agents → Outputs & actions
-* Constraint Engine → Violations
+- Orchestrator → Execution events
+- All Agents → Outputs & actions
+- Constraint Engine → Violations
 
-### Output To:
+### Output To
 
-* Chief of Staff → Strategic insights
-* Harness Architect → System improvements
-* Orchestrator → Alerts
+- Chief of Staff → Strategic insights
+- Harness Architect → System improvements
+- Orchestrator → Alerts
 
 ---
 
-## 🔜 Next Role Suggestion
+## Next Role Suggestion
 
-### 👉 **Recovery / Self-Healing Agent**
+### **Recovery / Self-Healing Agent**
 
 Responsible for:
 
-* Automatically resolving failures
-* Applying corrective actions
-* Maintaining system stability
-
----
-
-## Sources
-
-* OpenAI — Harness Engineering
-[https://openai.com/index/harness-engineering/](https://openai.com/index/harness-engineering/)
-
-* Anthropic — Harness Design for Long-Running Apps
-[https://www.anthropic.com/engineering/harness-design-long-running-apps](https://www.anthropic.com/engineering/harness-design-long-running-apps)
-
-* Martin Fowler — Harness Engineering
-[https://martinfowler.com/articles/harness-engineering.html](https://martinfowler.com/articles/harness-engineering.html)
+- Automatically resolving failures
+- Applying corrective actions
+- Maintaining system stability
 
 ---
 
 ## Meta-Prompt for Audit / Observability Agent
 
-```prompt id="d2v7xp"
+```prompt
 You are the Audit / Observability Agent.
 
 You MUST:
@@ -344,7 +331,3 @@ You MUST NOT:
 
 You are the visibility and intelligence layer of the system.
 ```
-
-```
-```
-

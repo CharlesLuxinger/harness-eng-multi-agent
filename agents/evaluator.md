@@ -55,7 +55,7 @@ outputs:
 - status: pass | fail
 - issues: list
 - feedback: structured
-````
+```
 
 ---
 
@@ -128,7 +128,7 @@ recommendations:
 
 ---
 
-### 5. 🚦 Pass/Fail Decision Engine
+### 5. Pass/Fail Decision Engine
 
 Determine whether execution can proceed:
 
@@ -192,7 +192,7 @@ actions:
 
 ## Evaluation Flow
 
-```mermaid id="c1v8pl"
+```mermaid
 graph TD
 
 Generator --> Artifact
@@ -211,7 +211,7 @@ Orchestrator --> Generator
 
 ## Evaluation Template
 
-```yaml id="k4qj2n"
+```yaml
 evaluation_execution:
 input:
 - artifact
@@ -269,7 +269,7 @@ output:
 
 ---
 
-## 🔗 Dependencies
+## Dependencies
 
 ### Input From
 
@@ -282,9 +282,9 @@ output:
 
 ---
 
-## 🔜 Next Role Suggestion
+## Next Role Suggestion
 
-### 👉 **Memory / State Manager Agent**
+### **Memory / State Manager Agent**
 
 Responsible for:
 
@@ -296,7 +296,7 @@ Responsible for:
 
 ## Meta-Prompt for Evaluator Agent
 
-```prompt id="b7w3ne"
+```prompt
 You are an Evaluator Agent.
 
 You MUST:
@@ -313,4 +313,3 @@ You MUST NOT:
 
 You are the gatekeeper of correctness and quality.
 ```
-

@@ -32,7 +32,7 @@ Memory is **the backbone of reliability** in long-running agent systems.
 
 ---
 
-### 1. 💾 Artifact Persistence
+### 1. Artifact Persistence
 
 Store all outputs generated during execution:
 
@@ -57,7 +57,7 @@ guarantees:
 - durability
 - traceability
 - version_control
-````
+```
 
 ---
 
@@ -65,12 +65,12 @@ guarantees:
 
 Maintain the full execution state:
 
-* Current pipeline step
-* Task status
-* Decision history
-* Evaluation outcomes
+- Current pipeline step
+- Task status
+- Decision history
+- Evaluation outcomes
 
-```yaml id="kz7d2p"
+```yaml
 execution_state:
 components:
 - current_step
@@ -89,7 +89,7 @@ requirement:
 
 Organize memory into structured layers:
 
-```yaml id="3qmn0v"
+```yaml
 memory_layers:
 short_term:
 description: "Current execution context"
@@ -117,11 +117,11 @@ persistence: append_only
 
 Reconstruct the required context for each execution cycle:
 
-* Retrieve relevant artifacts
-* Assemble structured input
-* Provide minimal, sufficient context
+- Retrieve relevant artifacts
+- Assemble structured input
+- Provide minimal, sufficient context
 
-```yaml id="7v2x9b"
+```yaml
 rehydration:
 inputs:
 - task_id
@@ -138,15 +138,15 @@ output:
 
 ---
 
-### 5. 🧹 Memory Optimization & Pruning
+### 5. Memory Optimization & Pruning
 
 Prevent memory bloat and entropy:
 
-* Remove irrelevant artifacts
-* Archive outdated data
-* Compress context
+- Remove irrelevant artifacts
+- Archive outdated data
+- Compress context
 
-```yaml id="p3z8xn"
+```yaml
 memory_optimization:
 strategies:
 - artifact_pruning
@@ -165,11 +165,11 @@ triggers:
 
 Enable efficient access to stored data:
 
-* Query by task, agent, or artifact type
-* Semantic retrieval (if applicable)
-* Version-aware fetching
+- Query by task, agent, or artifact type
+- Semantic retrieval (if applicable)
+- Version-aware fetching
 
-```yaml id="w5t1qe"
+```yaml
 retrieval:
 methods:
 - id_lookup
@@ -188,11 +188,11 @@ guarantees:
 
 Ensure data reliability:
 
-* Prevent corruption
-* Maintain version history
-* Validate stored artifacts
+- Prevent corruption
+- Maintain version history
+- Validate stored artifacts
 
-```yaml id="z9a4lo"
+```yaml
 integrity:
 checks:
 - schema_validation
@@ -207,7 +207,7 @@ policies:
 
 ## Memory Architecture
 
-```mermaid id="b4p8ts"
+```mermaid
 graph TD
 
 Orchestrator --> MemoryManager
@@ -226,7 +226,7 @@ RehydrationEngine --> Orchestrator
 
 ## Context Bundle Format
 
-```yaml id="2x6nkp"
+```yaml
 context_bundle:
 task:
 id
@@ -254,19 +254,19 @@ issues
 
 ### DO
 
-* Persist **everything relevant**
-* Keep context **minimal but sufficient**
-* Version all artifacts
-* Enable reproducibility
+- Persist **everything relevant**
+- Keep context **minimal but sufficient**
+- Version all artifacts
+- Enable reproducibility
 
 ---
 
 ### DON'T
 
-* Rely on in-memory context
-* Store unstructured data
-* Allow uncontrolled growth
-* Lose traceability
+- Rely on in-memory context
+- Store unstructured data
+- Allow uncontrolled growth
+- Lose traceability
 
 ---
 
@@ -274,69 +274,56 @@ issues
 
 ### 1. Artifact Repository
 
-* Structured storage system
-* Versioned outputs
+- Structured storage system
+- Versioned outputs
 
 ### 2. State Store
 
-* Execution tracking
-* Decision history
+- Execution tracking
+- Decision history
 
 ### 3. Context Rehydration Engine
 
-* Input reconstruction
-* Minimal context delivery
+- Input reconstruction
+- Minimal context delivery
 
 ### 4. Retrieval System
 
-* Query interface
-* Semantic access
+- Query interface
+- Semantic access
 
 ---
 
-## 🔗 Dependencies
+## Dependencies
 
-### Input From:
+### Input From
 
-* Orchestrator → State updates
-* Generator → Artifacts
-* Evaluator → Reports
+- Orchestrator → State updates
+- Generator → Artifacts
+- Evaluator → Reports
 
-### Output To:
+### Output To
 
-* Orchestrator → Context bundles
-* All Agents → Relevant memory
+- Orchestrator → Context bundles
+- All Agents → Relevant memory
 
 ---
 
-## 🔜 Next Role Suggestion
+## Next Role Suggestion
 
-### 👉 **Constraint / Policy Engine Agent**
+### **Constraint / Policy Engine Agent**
 
 Responsible for:
 
-* Defining and enforcing global rules
-* Managing system-wide constraints
-* Ensuring compliance across all agents
-
----
-
-## Sources
-
-* OpenAI — Harness Engineering
-[https://openai.com/index/harness-engineering/](https://openai.com/index/harness-engineering/)
-
-* Anthropic — Harness Design for Long-Running Apps
-[https://www.anthropic.com/engineering/harness-design-long-running-apps](https://www.anthropic.com/engineering/harness-design-long-running-apps)
-
-* Martin Fowler — Harness Engineering
-[https://martinfowler.com/articles/harness-engineering.html](https://martinfowler.com/articles/harness-engineering.html)
+- Defining and enforcing global rules
+- Managing system-wide constraints
+- Ensuring compliance across all agents
 
 ---
 
 ## Meta-Prompt for Memory / State Manager
 
-```prompt id="n2y7md"
+```prompt
 You are the Memory / State Manager Agent.
 
 You MUST:
@@ -353,5 +340,3 @@ You MUST NOT:
 
 You are responsible for continuity and system memory.
 ```
-
-

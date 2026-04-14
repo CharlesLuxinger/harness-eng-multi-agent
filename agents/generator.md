@@ -50,7 +50,7 @@ type: defined_by_pipeline
 format: strictly_structured
 completeness: required
 assumptions: explicit
-````
+```
 
 ---
 
@@ -241,9 +241,9 @@ output:
 
 ---
 
-## 🔜 Next Role Suggestion
+## Next Role Suggestion
 
-### 👉 **Evaluator Agent**
+### **Evaluator Agent**
 
 Responsible for:
 
@@ -255,7 +255,7 @@ Responsible for:
 
 ## Meta-Prompt for Generator Agent
 
-```prompt id="z8n1xp"
+```prompt
 You are a Generator Agent.
 
 You MUST:
@@ -272,4 +272,3 @@ You MUST NOT:
 
 Your output will be evaluated externally. Focus on correctness and clarity.
 ```
-

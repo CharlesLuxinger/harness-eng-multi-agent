@@ -50,11 +50,11 @@ criteria:
 
 output:
 - relevant_artifacts
-````
+```
 
 ---
 
-### 2. 🧹 Noise Filtering
+### 2. Noise Filtering
 
 Remove unnecessary or harmful information:
 
@@ -79,7 +79,7 @@ goal:
 
 Format context for agent consumption:
 
-```yaml id="7m1vrs"
+```yaml
 context_format:
 structure:
 - task_summary
@@ -99,7 +99,7 @@ requirements:
 
 Control size and complexity of inputs:
 
-```yaml id="4p8zqn"
+```yaml
 context_budget:
 constraints:
 - max_tokens
@@ -113,11 +113,11 @@ strategy:
 
 ---
 
-### 5. 🔗 Dependency-Aware Context Assembly
+### 5. Dependency-Aware Context Assembly
 
 Ensure context reflects task dependencies:
 
-```yaml id="6k2xpt"
+```yaml
 dependency_context:
 include:
 - upstream_outputs
@@ -134,7 +134,7 @@ exclude:
 
 Adjust context based on execution feedback:
 
-```yaml id="9q3vxm"
+```yaml
 context_adaptation:
 triggers:
 - task_failure
@@ -153,7 +153,7 @@ actions:
 
 Ensure context quality before delivery:
 
-```yaml id="1z7krs"
+```yaml
 context_validation:
 checks:
 - relevance_score
@@ -171,7 +171,7 @@ outcomes:
 
 Deliver optimized context bundles:
 
-```yaml id="5n8xqp"
+```yaml
 context_bundle:
 task:
 summary
@@ -208,7 +208,7 @@ ContextBundle --> Agents
 
 ## Context Optimization Pipeline
 
-```yaml id="3p2kxn"
+```yaml
 context_pipeline:
 input:
 - raw_memory
@@ -266,16 +266,8 @@ output:
 ### 4. Adaptation Mechanism
 
 - Dynamic context refinement
-- --
 
-## Set the MD files
-
-- Set the MD files: AGENT, HEARTBEAT, SOULD and TOOLS of Context Curator Agent
-- You can verify if is saved here: <http://127.0.0.1:3000/HER/agents/context-curator-agent/instructions>
-
----
-
-## 🔗 Dependencies
+## Dependencies
 
 ### Input From
 
@@ -291,9 +283,9 @@ output:
 
 ---
 
-## 🔜 Next Role Suggestion
+## Next Role Suggestion
 
-### 👉 **Simulation / Dry-Run Agent**
+### Suggested: **Simulation / Dry-Run Agent**
 
 Responsible for:
 
@@ -322,4 +314,3 @@ You MUST NOT:
 
 You are responsible for maximizing signal and minimizing noise.
 ```
-

@@ -330,9 +330,9 @@ usage:
 
 ---
 
-## 🔜 Next Role Suggestion
+## Role Suggestion
 
-### 👉 Suggested: **Harness Architect Agent**
+### Suggested: **Harness Architect Agent**
 
 Responsible for:
 

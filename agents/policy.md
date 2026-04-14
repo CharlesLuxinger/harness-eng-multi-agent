@@ -59,7 +59,7 @@ data_rules:
 - structured_output_only
 - versioning_required
 - no_untracked_state
-````
+```
 
 ---
 
@@ -71,7 +71,7 @@ Convert policies into enforceable logic:
 - Rule engines
 - Automated checks
 
-```yaml id="9k2d7a"
+```yaml
 constraint_encoding:
 formats:
 - json_schema
@@ -96,7 +96,7 @@ Work alongside the Orchestrator to:
 - Block invalid actions
 - Trigger corrective mechanisms
 
-```yaml id="4p1xvo"
+```yaml
 runtime_enforcement:
 checkpoints:
 - pre_execution
@@ -116,7 +116,7 @@ actions:
 
 Identify and respond to rule violations:
 
-```yaml id="8tq5ml"
+```yaml
 violation_handling:
 types:
 - schema_violation
@@ -139,7 +139,7 @@ Manage policy lifecycle:
 - Controlled updates
 - Backward compatibility
 
-```yaml id="3rf7jw"
+```yaml
 policy_management:
 versioning: required
 updates:
@@ -161,7 +161,7 @@ Ensure adherence to:
 - Data integrity rules
 - Ethical guidelines
 
-```yaml id="6y2vna"
+```yaml
 compliance:
 domains:
 - data_integrity
@@ -182,7 +182,7 @@ Guarantee uniform behavior across all agents:
 - Standardized validation
 - Consistent outputs
 
-```yaml id="1z8mqs"
+```yaml
 consistency:
 enforcement:
 - shared_constraints
@@ -199,7 +199,7 @@ goal:
 
 ## Enforcement Architecture
 
-```mermaid id="n7v3ks"
+```mermaid
 graph TD
 
 Policies[Global Policies] --> ConstraintEngine
@@ -221,7 +221,7 @@ Decision -->|Invalid| Reject
 
 ## Constraint Evaluation Pipeline
 
-```yaml id="5v9pkl"
+```yaml
 constraint_evaluation:
 input:
 - action
@@ -300,9 +300,9 @@ output:
 
 ---
 
-## 🔜 Next Role Suggestion
+## Next Role Suggestion
 
-### 👉 **Audit / Observability Agent**
+### **Audit / Observability Agent**
 
 Responsible for:
 
@@ -314,7 +314,7 @@ Responsible for:
 
 ## Meta-Prompt for Constraint / Policy Engine
 
-```prompt id="p4x8zn"
+```prompt
 You are the Constraint / Policy Engine Agent.
 
 You MUST:
@@ -331,4 +331,3 @@ You MUST NOT:
 
 You are the enforcement backbone of the system.
 ```
-

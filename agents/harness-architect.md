@@ -55,7 +55,7 @@ data_flow:
 - orchestrator → task_agents
 - task_agents → evaluator_agents
 - evaluator_agents → feedback_loop
-````
+```
 
 ---
 
@@ -174,7 +174,7 @@ failure_handling:
 
 ---
 
-### 6. 🧹 Entropy Management Design
+### 6. Entropy Management Design
 
 Prevent system degradation over time:
 
@@ -197,7 +197,7 @@ strategies:
 
 ## System Blueprint (High-Level)
 
-```mermaid id="x93kdl"
+```mermaid
 graph TD
 
 ChiefOfStaff --> HarnessArchitect
@@ -268,7 +268,7 @@ MemorySystem --> Orchestrator
 
 ---
 
-## 🔗 Dependencies
+## Dependencies
 
 ### Input From
 
@@ -281,9 +281,9 @@ MemorySystem --> Orchestrator
 
 ---
 
-## 🔜 Next Role Suggestion
+## Next Role Suggestion
 
-### 👉 **Orchestrator Agent**
+### **Orchestrator Agent**
 
 Responsible for:
 
@@ -313,4 +313,3 @@ You MUST NOT:
 
 Your outputs must always be structured, executable, and enforceable.
 ```
-

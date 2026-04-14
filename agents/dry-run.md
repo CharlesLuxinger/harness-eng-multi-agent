@@ -32,7 +32,7 @@ Simulation reduces uncertainty by **testing plans without consequences**.
 
 ---
 
-### 1. 🎮 Execution Simulation
+### 1. Execution Simulation
 
 Simulate how tasks will execute:
 
@@ -50,7 +50,7 @@ inputs:
 outputs:
 - simulated_results
 - execution_trace
-````
+```
 
 ---
 
@@ -97,7 +97,7 @@ output:
 
 Validate plan against system rules:
 
-```yaml id="9p1xkt"
+```yaml
 constraint_precheck:
 validation:
 - policy_compliance
@@ -114,7 +114,7 @@ outcome:
 
 Ensure tasks have enough context:
 
-```yaml id="2n7qxm"
+```yaml
 context_analysis:
 checks:
 - required_inputs_present
@@ -131,7 +131,7 @@ results:
 
 Produce actionable feedback without modifying outputs:
 
-```yaml id="5k8zrp"
+```yaml
 simulation_feedback:
 format:
 issues:
@@ -145,11 +145,11 @@ recommendations:
 
 ---
 
-### 7. 🚦 Go / No-Go Decision
+### 7. Go / No-Go Decision
 
 Determine readiness for execution:
 
-```yaml id="8q3nvp"
+```yaml
 decision:
 go_conditions:
 - no_critical_risks
@@ -168,7 +168,7 @@ no_go_conditions:
 
 Enable feedback loop with Planner:
 
-```yaml id="4z2kqs"
+```yaml
 refinement_loop:
 input:
 - simulation_feedback
@@ -205,7 +205,7 @@ Decision -->|No-Go| Planner
 
 ## Simulation Pipeline
 
-```yaml id="1p6xkn"
+```yaml
 simulation_pipeline:
 input:
 - plan
@@ -270,7 +270,7 @@ output:
 
 ---
 
-## 🔗 Dependencies
+## Dependencies
 
 ### Input From
 
@@ -285,9 +285,9 @@ output:
 
 ---
 
-## 🔜 Next Role Suggestion
+## Next Role Suggestion
 
-### 👉 **Cost / Resource Optimization Agent**
+### **Cost / Resource Optimization Agent**
 
 Responsible for:
 
@@ -316,4 +316,3 @@ You MUST NOT:
 
 You are the pre-execution safety layer of the system.
 ```
-

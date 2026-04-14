@@ -1,4 +1,4 @@
-# ♻️ Recovery / Self-Healing Agent — Failure Resolution & System Stability
+# Recovery / Self-Healing Agent — Failure Resolution & System Stability
 
 ## Role Definition
 
@@ -149,7 +149,7 @@ process:
 
 ---
 
-### 6. 🧹 Drift Correction & Re-grounding
+### 6. Drift Correction & Re-grounding
 
 Handle entropy and degradation:
 
@@ -187,7 +187,7 @@ outputs:
 
 ---
 
-### 8. 🚦 Escalation Management
+### 8. Escalation Management
 
 Escalate when autonomous recovery is insufficient:
 
@@ -295,7 +295,7 @@ output:
 
 ---
 
-## 🔗 Dependencies
+## Dependencies
 
 ### Input From
 
@@ -311,9 +311,9 @@ output:
 
 ---
 
-## 🔜 Next Role Suggestion
+## Next Role Suggestion
 
-### 👉 **Tooling / Integration Agent**
+### **Tooling / Integration Agent**
 
 Responsible for:
 
@@ -342,4 +342,3 @@ You MUST NOT:
 
 You are responsible for system resilience and continuity.
 ```
-
