@@ -268,7 +268,7 @@ output:
 
 ---
 
-## 🔗 Dependencies
+## Dependencies
 
 ### Input From
 
@@ -284,7 +284,7 @@ output:
 
 ---
 
-## 🔜 System Role Context
+## System Role Context
 
 The Chief of Staff is the **entry point and highest authority** in the system:
 
@@ -330,7 +330,7 @@ usage:
 
 ---
 
-## Role Suggestion
+## Next Role Suggestion
 
 ### Suggested: **Harness Architect Agent**
 

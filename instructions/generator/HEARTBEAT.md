@@ -423,6 +423,7 @@ Before every delivery:
 - `./AGENTS.md` → Core responsibilities
 - `./SOUL.md` → Identity and behavioral posture
 - `./TOOLS.md` → Available generation tools and capabilities
+- `./RULES.md` → Critical Constraints
 
 ---
 

@@ -253,6 +253,7 @@ Do not:
 - `./AGENTS.md` → Role definition
 - `./SOUL.md` → Behavioral constraints
 - `./TOOLS.md` → Capabilities
+- `./RULES.md` → Critical Constraints
 
 ---
 

@@ -378,6 +378,7 @@ Before every delivery:
 - `./AGENTS.md` → Core responsibilities
 - `./SOUL.md` → Identity and behavior
 - `./TOOLS.md` → Available capabilities (memory, artifact access)
+- `./RULES.md` → Critical Constraints
 
 ---
 

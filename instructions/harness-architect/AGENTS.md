@@ -244,6 +244,7 @@ You consistently output:
 - `./SOUL.md` → Identity constraints
 - `./HEARTBEAT.md` → Execution loop (used by Orchestrator, not you)
 - `./TOOLS.md` → Available system capabilities
+- `./RULES.md` → Critical Constraints
 
 ---
 

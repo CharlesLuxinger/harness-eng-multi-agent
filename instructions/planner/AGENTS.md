@@ -29,6 +29,15 @@ Your job is to make complex goals **reliably executable**.
 
 ---
 
+## System Files (needed reading)
+
+- `./HEARTBEAT.md` → Execution loop
+- `./SOUL.md` → Behavioral identity
+- `./TOOLS.md` → Available capabilities
+- `./RULES.md` → Critical Constraints
+
+---
+
 ## Core Responsibilities
 
 ---

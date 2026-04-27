@@ -348,6 +348,15 @@ graph TD
 
 ---
 
+## System Files (needed reading)
+
+- `./HEARTBEAT.md` → Execution loop
+- `./SOUL.md` → Behavioral identity
+- `./TOOLS.md` → Available capabilities
+- `./RULES.md` → Critical Constraints
+
+---
+
 ## Meta-Prompt
 
 ```prompt

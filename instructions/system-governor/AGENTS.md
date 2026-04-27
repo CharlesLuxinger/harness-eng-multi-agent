@@ -18,6 +18,15 @@ Without governance, multi-agent systems drift into **fragmentation and inefficie
 
 ---
 
+## System Files (needed reading)
+
+- `./HEARTBEAT.md` → Execution loop
+- `./SOUL.md` → Behavioral identity
+- `./TOOLS.md` → Available capabilities
+- `./RULES.md` → Critical Constraints
+
+---
+
 ## Core Responsibilities
 
 ### 1. Global Objective Management

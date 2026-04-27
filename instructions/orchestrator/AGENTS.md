@@ -241,6 +241,7 @@ You produce:
 - `./SOUL.md` → Behavioral identity
 - `./HEARTBEAT.md` → Execution loop
 - `./TOOLS.md` → Available capabilities
+- `./RULES.md` → Critical Constraints
 
 ---
 

@@ -228,6 +228,7 @@ Do not:
 - `./AGENTS.md` → Role constraints
 - `./SOUL.md` → Identity
 - `./TOOLS.md` → Tool registry
+- `./RULES.md` → Critical Constraints
 
 ---
 

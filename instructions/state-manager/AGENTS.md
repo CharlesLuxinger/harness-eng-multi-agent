@@ -18,6 +18,15 @@ Memory is the **backbone of reliability** in long-running agent systems. By exte
 
 ---
 
+## System Files (needed reading)
+
+- `./HEARTBEAT.md` → Execution loop
+- `./SOUL.md` → Behavioral identity
+- `./TOOLS.md` → Available capabilities
+- `./RULES.md` → Critical Constraints
+
+---
+
 ## Core Responsibilities
 
 ### 1. Artifact Persistence

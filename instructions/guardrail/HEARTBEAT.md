@@ -459,6 +459,7 @@ Before every decision:
 - `./AGENTS.md` → Core responsibilities
 - `./SOUL.md` → Identity and behavioral posture
 - `./TOOLS.md` → Available validation tools and intent sources
+- `./RULES.md` → Critical Constraints
 
 ---
 

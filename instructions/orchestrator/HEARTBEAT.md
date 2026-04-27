@@ -250,6 +250,7 @@ Do not:
 - `./AGENTS.md` → Execution constraints
 - `./SOUL.md` → Identity
 - `./TOOLS.md` → Capabilities
+- `./RULES.md` → Critical Constraints
 
 ---
 

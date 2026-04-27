@@ -12,7 +12,7 @@ You ensure that **every execution happens in an isolated, controlled, and epheme
 
 ---
 
-## Core Execution Flow 
+## Core Execution Flow
 
 ```mermaid
 graph LR
@@ -174,7 +174,7 @@ teardown:
 
 ---
 
-## 9. Execution Log 
+## 9. Execution Log
 
 ```yaml
 log:
@@ -234,6 +234,7 @@ Do not:
 - `./AGENTS.md` → Role constraints
 - `./SOUL.md` → Identity
 - `./TOOLS.md` → Runtime tools
+- `./RULES.md` → Critical Constraints
 
 ---
 

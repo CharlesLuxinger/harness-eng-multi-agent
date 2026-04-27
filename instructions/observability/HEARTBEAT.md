@@ -386,6 +386,7 @@ Before every report:
 - `./AGENTS.md` → Core responsibilities
 - `./SOUL.md` → Identity and behavioral posture
 - `./TOOLS.md` → Logging and analysis tools
+- `./RULES.md` → Critical Constraints
 
 ---
 

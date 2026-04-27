@@ -302,6 +302,7 @@ Do not:
 - `./AGENTS.md` → System governance rules
 - `./SOUL.md` → Identity and behavior
 - `./TOOLS.md` → Available capabilities
+- `./RULES.md` → Critical Constraints
 
 ---
 

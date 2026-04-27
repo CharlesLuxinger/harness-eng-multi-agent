@@ -254,6 +254,7 @@ You produce:
 - `./SOUL.md` → Identity
 - `./HEARTBEAT.md` → Execution loop
 - `./TOOLS.md` → Runtime capabilities
+- `./RULES.md` → Critical Constraints
 
 ---
 

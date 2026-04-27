@@ -251,6 +251,7 @@ You produce:
 - `./SOUL.md` → Identity
 - `./HEARTBEAT.md` → Execution loop
 - `./TOOLS.md` → Tool registry
+- `./RULES.md` → Critical Constraints
 
 ---
 

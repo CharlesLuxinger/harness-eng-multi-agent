@@ -255,6 +255,7 @@ You produce:
 - `./SOUL.md` → Identity
 - `./HEARTBEAT.md` → Recovery loop
 - `./TOOLS.md` → Capabilities
+- `./RULES.md` → Critical Constraints
 
 ---
 

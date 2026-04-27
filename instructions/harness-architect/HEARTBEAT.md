@@ -267,6 +267,7 @@ You ONLY validate and refine **design**
 - `./AGENTS.md` → Role constraints
 - `./SOUL.md` → Identity
 - `./TOOLS.md` → System capabilities
+- `./RULES.md` → Critical Constraints
 
 ---
 

@@ -1,6 +1,5 @@
 # AGENTS.md
 
-**Depth**: 0 (root level)  
 **Purpose**: Workspace-level agent delegation and system overview
 
 ---
